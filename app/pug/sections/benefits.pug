@@ -1,13 +1,13 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-- var iconClass = '_left v-col-12 v-col-sm-6 v-col-md-4';
+- var iconClass = '_left col-12 col-sm-6 col-md-4';
 +b.SECTION.benefits._organization
 	+quadro('_style-1 benefits__quadro_1')
 	+quadro('_style-2 benefits__quadro_2')
-	.v-container
+	.container
 		+b.H3.title-md.title-section Мы организуем поступление так, что Вам даже не придется никуда ехать
-		.v-row
+		.row
 			+icon(iconClass, 'img/icon-benefit-1.png', 'Всё в удаленном режиме')
 				p Если у Вас нет времени или возможности приехать к нам в офис, мы организуем всё удаленно. Собеседование с ребенком по Скайпу, доставка документов по почте
 			+icon(iconClass, 'img/icon-benefit-2.png', 'Соберем документы и откроем визу')

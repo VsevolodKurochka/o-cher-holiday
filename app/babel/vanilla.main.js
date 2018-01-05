@@ -26,10 +26,6 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
-		// Cookie timer
-
-			CookieTimer.start('timer', null, 600);
-
 		const classes = {
 			active: 'active',
 			menuActive: 'active'
@@ -68,7 +64,7 @@
 					speed: 1000
 				});
 
-				const jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
+				const jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
 
 				for(var i = 0; i < jsNavLinks.length; i++){
 					jsNavLinks[i].addEventListener('click', function(e) {
@@ -110,7 +106,7 @@
 
 				function checkScrollY(){
 					let windowScroll = window.scrollY;
-					windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+					windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
 				}
 
 				checkScrollY();
@@ -119,7 +115,7 @@
 
 
 		// Modal Window initialization
-		let themeModal = 'v-modal';
+		let themeModal = 'modal';
 		let modalBtn = document.querySelectorAll(`[data-action="${themeModal}"]`);
 		let modalBtnL = modalBtn.length;
 

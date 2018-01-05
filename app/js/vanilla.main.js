@@ -32,10 +32,6 @@ var exists = function exists(element) {
 (function () {
 	document.addEventListener("DOMContentLoaded", function () {
 
-		// Cookie timer
-
-		CookieTimer.start('timer', null, 600);
-
 		var classes = {
 			active: 'active',
 			menuActive: 'active'
@@ -74,7 +70,7 @@ var exists = function exists(element) {
 			speed: 1000
 		});
 
-		var jsNavLinks = document.querySelectorAll('.v-nav__menu a[href*="#"]');
+		var jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
 
 		for (var i = 0; i < jsNavLinks.length; i++) {
 			jsNavLinks[i].addEventListener('click', function (e) {
@@ -114,7 +110,7 @@ var exists = function exists(element) {
 
 		function checkScrollY() {
 			var windowScroll = window.scrollY;
-			windowScroll > 0 ? addClass(jsNavWrapper, 'v-nav_scrolled') : removeClass(jsNavWrapper, 'v-nav_scrolled');
+			windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
 		}
 
 		checkScrollY();
@@ -122,7 +118,7 @@ var exists = function exists(element) {
 		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
-		var themeModal = 'v-modal';
+		var themeModal = 'modal';
 		var modalBtn = document.querySelectorAll('[data-action="' + themeModal + '"]');
 		var modalBtnL = modalBtn.length;
 
