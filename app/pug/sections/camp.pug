@@ -1,0 +1,28 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var camps = [
+		{
+			image: 'img/camp-1.jpg',
+			title: 'Полчин-Здруй',
+			map: 'img/map-1.jpg'
+		},
+		{
+			image: 'img/camp-2.jpg',
+			title: 'Остров-Любельский',
+			map: 'img/map-2.jpg'
+		},
+		{
+			image: 'img/camp-3.jpg',
+			title: 'Закопана',
+			map: 'img/map-3.jpg'
+		}
+	];
++b.SECTION.section.camp
+	.container
+		+e.H3.title.title-md Приглашаем Вашего подростка в 1 из 3-х летних лагерей Польши
+		.row
+			each camp in camps
+				.col-12.col-sm-4
+					+camp(camp.image, camp.title, camp.map)

@@ -2818,7 +2818,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .europe__picture {
   position: relative;
   z-index: 1;
-  overflow: hidden;
 }
 
 .europe__picture-sky {
@@ -2895,20 +2894,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @-webkit-keyframes cloud-move {
   0% {
     margin-left: -20%;
-    -webkit-transform: scale(.9);
-    transform: scale(.9);
   }
   30% {
     -webkit-transform: translateY(15px);
     transform: translateY(15px);
   }
   60% {
-    -webkit-transform: translateY(0) scale(.3);
-    transform: translateY(0) scale(.3);
-  }
-  75% {
-    -webkit-transform: translateY(0) scale(.5);
-    transform: translateY(0) scale(.5);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
     margin-left: 100%;
@@ -2918,20 +2911,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @keyframes cloud-move {
   0% {
     margin-left: -20%;
-    -webkit-transform: scale(.9);
-    transform: scale(.9);
   }
   30% {
     -webkit-transform: translateY(15px);
     transform: translateY(15px);
   }
   60% {
-    -webkit-transform: translateY(0) scale(.3);
-    transform: translateY(0) scale(.3);
-  }
-  75% {
-    -webkit-transform: translateY(0) scale(.5);
-    transform: translateY(0) scale(.5);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
     margin-left: 100%;
@@ -2941,8 +2928,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .europe__picture-cloud_1 {
   top: 0;
   left: 0;
-  -webkit-animation-duration: 30s;
-  animation-duration: 30s;
 }
 
 .europe__picture-cloud_2 {
@@ -2953,8 +2938,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .europe__picture-cloud_3 {
   top: -15px;
   left: 45%;
-  -webkit-animation-duration: 45s;
-  animation-duration: 45s;
 }
 
 .europe__picture-cloud_4 {
@@ -2965,8 +2948,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .europe__picture-cloud_5 {
   top: -30px;
   left: 90%;
-  -webkit-animation-duration: 20s;
-  animation-duration: 20s;
 }
 
 .europe__picture-cloud_6 {

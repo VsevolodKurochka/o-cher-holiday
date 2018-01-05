@@ -15,7 +15,7 @@ $europe-plain-height: 60px;
 		
 		@include relative();
 		z-index: z-index('default');
-		overflow: hidden;
+		
 
 		@include ee('sky'){
 			@include relative();
@@ -60,16 +60,12 @@ $europe-plain-height: 60px;
 				@keyframes cloud-move{
 					0%{
 						margin-left: -20%;
-						transform: scale(0.9);
 					}
 					30%{
 						transform: translateY(15px);
 					}
 					60%{
-						transform: translateY(0) scale(0.3);
-					}
-					75%{
-						transform: translateY(0) scale(0.5)
+						transform: translateY(0);
 					}
 					100%{
 						margin-left: 100%;
@@ -80,7 +76,7 @@ $europe-plain-height: 60px;
 				left: 0;
 				top: 0;
 				//animation-delay: 1s;
-				animation-duration: 30s;
+				//animation-duration: 30s;
 			}
 
 			@include m('2'){
@@ -93,7 +89,7 @@ $europe-plain-height: 60px;
 				left: 45%;
 				top: -15px;
 				//animation-delay: 2s;
-				animation-duration: 45s;
+				//animation-duration: 45s;
 			}
 
 			@include m('4'){
@@ -107,7 +103,7 @@ $europe-plain-height: 60px;
 				left: 90%;
 				top: -30px;
 				//animation-delay: 1s;
-				animation-duration: 20s;
+				//animation-duration: 20s;
 			}
 
 			@include m('6'){

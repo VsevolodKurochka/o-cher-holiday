@@ -58,6 +58,14 @@ mixin review(wrapper, name, country, img)
 				p=name
 				p=country
 
+mixin camp(image, title, map)
+	+b.camp-item
+		+e.header
+			+e.IMG.header-image(src=image)
+			+e.P.header-title=title
+		+e.map
+			+e.IMG.map-image(src=map)
+
 mixin quadro(classname)
 	+b.quadro(data-emergence="hidden" class=classname)
 		- for(var i = 1; i <= 9; i++)
