@@ -27,7 +27,7 @@ block footer
 		+e.box._default
 			+e.header
 				+e.P.title Проконсультироваться бесплатно
-				+e.BUTTON.close(data-close="v-modal") &times;
+				+e.BUTTON.close(data-close="modal") &times;
 			+e.body
 				+b.FORM.form._block(action="mail.php" method="POST")
 					+e.content
@@ -43,14 +43,14 @@ block footer
 		+e.box._default
 			+e.header
 				+e.P.title Политика конфиденциальности
-				+e.BUTTON.close(data-close="v-modal") &times;
+				+e.BUTTON.close(data-close="modal") &times;
 			+e.body
 				p Lorem....
 	+b.modal#modal-otkaz
 		+e.box._default
 			+e.header
 				+e.P.title Отказ от ответственности
-				+e.BUTTON.close(data-close="v-modal") &times;
+				+e.BUTTON.close(data-close="modal") &times;
 			+e.body
 				p Lorem....
 	

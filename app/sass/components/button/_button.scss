@@ -30,6 +30,9 @@
   &_size{
     &-lg{
       @include btn-size($btn-large-padding, $btn-large-size);
+      @include min(sm){
+        @include btn-size($btn-large-sm-padding, $btn-large-sm-size);
+      }
     }
     &-fluid{
       display: block;

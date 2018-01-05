@@ -1101,8 +1101,8 @@ a, button {
 
 @media (min-width: 1025px) {
   .icon_center .icon__inner {
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
@@ -1397,8 +1397,15 @@ a, button {
 }
 
 .btn_size-lg {
-  padding: 20px 25px 22px 25px;
-  font-size: 17px;
+  padding: 14px 20px 16px 20px;
+  font-size: 15px;
+}
+
+@media (min-width: 768px) {
+  .btn_size-lg {
+    padding: 20px 25px 22px 25px;
+    font-size: 17px;
+  }
 }
 
 .btn_size-fluid {
@@ -1826,7 +1833,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .title-lg {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 @media (min-width: 768px) {
@@ -2251,7 +2258,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .site-header__description {
   margin-bottom: 30px;
   font-family: FormularBold;
-  font-size: 21px;
+  font-size: 17px;
   line-height: 1.1;
 }
 
@@ -2260,6 +2267,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
     max-width: 700px;
     margin-right: auto;
     margin-left: auto;
+    font-size: 21px;
   }
 }
 
@@ -3160,6 +3168,13 @@ input[type="checkbox"]:checked + .control__indicator:before {
 .test rect,
 .test path {
   color: #ddd;
+}
+
+@media (min-width: 1025px) {
+  .posibility {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 
 .posibility__title {

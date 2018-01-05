@@ -6,7 +6,7 @@
 	&_center &{
 		@include e('inner'){
 			@include min(md){
-				@include padding-x(30px);
+				@include padding-x(15px);
 			}
 		}
 		@include e('header'){

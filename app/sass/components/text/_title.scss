@@ -42,7 +42,7 @@ $sizes: (
 		@extend %title-default;
 	}
 	&-lg{
-		font-size: 30px;
+		font-size: 25px;
 		@include fs('title-lg');
 		@extend %title-default;
 	}
