@@ -1,0 +1,70 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var timeTable = [
+		{
+			time: '07:30',
+			act: 'Подъем'
+		},
+		{
+			time: '08:00',
+			act: 'Утренняя гимнастика'
+		},
+		{
+			time: '9:00',
+			act: 'Завтрак'
+		},
+		{
+			time: '9:30 - 13:30',
+			act: 'Занятия польским языком (группы по 10-12 человек)'
+		},
+		{
+			time: '14:00',
+			act: 'Обед'
+		},
+		{
+			time: '15:00 - 16:00/18:00',
+			act: 'Экскурсия/спорт/игровые активности'
+		},
+		{
+			time: '16:30',
+			act: 'Полдник'
+		},
+		{
+			time: '17.00 – 18.00',
+			act: 'Свободное время'
+		},
+		{
+			time: '18:00',
+			act: 'Ужин'
+		},
+		{
+			time: '18:30 - 21:00',
+			act: 'Настольные игры/дискотека/просмотр фильма'
+		},
+		{
+			time: '22:00',
+			act: 'Отбой'
+		}
+	];
++b.SECTION.standart-day
+	.container
+		.row
+			.col-sm-6.col-md-4
+				+e.image-wrapper
+					+e.image(src="img/standart-day.jpg")
+					+quadro('_style-2')
+			.col-sm-6.col-md-8
+				+e.H3.title.title-md
+					| Вот как будет проходить 					
+					span.color-brand-2 стандартный день Вашего ребенка 
+					| в языковом лагере*
+				+b.timetable
+					each timeItem in timeTable
+						+day(timeItem.time, timeItem.act)
+				+e.footer
+					+e.footer-item
+						+b.BUTTON.btn._size-lg._brand-1._shadow-brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Задать вопросы специалисту
+					+e.footer-item
+						p * Это примерный распорядок дня. Он может меняться в зависимости от лагеря и конкретного дня недели

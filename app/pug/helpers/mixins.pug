@@ -66,6 +66,11 @@ mixin camp(image, title, map)
 		+e.map
 			+e.IMG.map-image(src=map)
 
+mixin day(time, act)
+	+e.item
+		+e.P.item-day=time
+		+e.P.item-act=act
+
 mixin quadro(classname)
 	+b.quadro(data-emergence="hidden" class=classname)
 		- for(var i = 1; i <= 9; i++)
