@@ -1,0 +1,33 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var posibilityClass = '_center col-12 col-sm-6 col-md-3';
+	var posibilities = [
+		{
+			image: 'img/icon-posibility-1.svg',
+			content: 'Отказаться от уроков польского'
+		},
+		{
+			image: 'img/icon-posibility-2.svg',
+			content: 'Скорректировать программу под своего ребенка, в зависимости от того, что ему нравится'
+		},
+		{
+			image: 'img/icon-posibility-3.svg',
+			content: 'Выбрать лагерь, котором много детей (до 200) или поменьше (50-60)'
+		},
+		{
+			image: 'img/icon-posibility-4.svg',
+			content: 'Есть лагеря где почти все дети из Украины, а есть те, где больше ребят из Европы. Вы можете выбрать любой'
+		}
+	];
+
++b.SECTION.posibility.section
+	.container
+		+e.H3.title.title-md
+			span.text-underline.color-brand-1 Отлично подойдет
+			|. Тем более, что Вы можете:
+		.row
+			each posibility in posibilities
+				+icon(posibilityClass, posibility.image, null)
+					p=posibility.content

@@ -3162,6 +3162,17 @@ input[type="checkbox"]:checked + .control__indicator:before {
   color: #ddd;
 }
 
+.posibility__title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .posibility__title {
+    margin-bottom: 60px;
+  }
+}
+
 .question {
   padding-top: 125px;
   margin-top: -125px;
