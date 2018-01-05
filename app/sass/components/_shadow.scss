@@ -40,6 +40,7 @@
 			}
 		}
 	}
+	
 	@include e('header'){
 		text-align: center;
 		margin-bottom: 30px;
@@ -56,6 +57,7 @@
 	}
 	@include e('footer'){
 		margin-top: 30px;
+		text-align: center;
 	}
 	&_large{
 		padding: 45px 15px;
