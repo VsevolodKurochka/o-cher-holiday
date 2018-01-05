@@ -13,3 +13,15 @@ include ../helpers/mixins
 					p Но Европа - это не только дождливые улочки Лондона, набережные Ниццы и снежные курорты Куршавеля…
 					p Есть Европа не менее прекрасная, но которую можете позволить себе Вы - простая украинская семья, которая желает своему ребенку самого лучшего.
 			.col-12.col-sm-6
+				+e.picture(data-emergence="hidden")
+					+e.picture-circle
+					+e.picture-sky
+						+e.picture-plane(src="img/europe-plane.png")
+						+e.picture-clouds
+							+e.picture-cloud._1(src="img/europe-cloud-1.png")
+							+e.picture-cloud._2(src="img/europe-cloud-2.png")
+							+e.picture-cloud._3(src="img/europe-cloud-3.png")
+							+e.picture-cloud._4(src="img/europe-cloud-4.png")
+							+e.picture-cloud._5(src="img/europe-cloud-5.png")
+							+e.picture-cloud._6(src="img/europe-cloud-6.png")
+					+e.picture-background(src="img/europe.png")

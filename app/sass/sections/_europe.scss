@@ -1,0 +1,139 @@
+$europe-plain-height: 60px;
+
+@include b('europe'){
+	@include padding-y(30px, 45px);
+	overflow: hidden;
+	@include e('title'){
+		margin-bottom: 30px;
+	}
+	@include e('content'){
+		@include min(md){
+			width: 80%;
+		}
+	}
+	@include e('picture'){
+		
+		@include relative();
+		z-index: z-index('default');
+		overflow: hidden;
+
+		@include ee('sky'){
+			@include relative();
+		}
+
+		@include ee('plane'){
+			@include absolute(0, null, null, 0);
+			transform: none;
+			backface-visibility: hidden;
+			perspective: 1000px;
+			animation: plane-move 50s linear infinite;
+			@include transition();
+			@at-root{
+				@keyframes plane-move{
+					0%{
+						margin-left: 0%;
+					}
+
+					100%{
+						margin-left: 100%;
+						transform: scale(0.5);
+					}
+				}
+			}
+		}
+
+		@include ee('clouds'){
+			@include relative();
+			width: 100%;
+			min-height: 1px;
+			top: $europe-plain-height + 45px;
+		}
+
+		@include ee('cloud'){
+			@include absolute();
+			transform: none;
+			backface-visibility: hidden;
+			perspective: 1000px;
+			animation: cloud-move 100s linear infinite;
+			@include transition();
+			@at-root{
+				@keyframes cloud-move{
+					0%{
+						margin-left: -20%;
+						transform: scale(0.9);
+					}
+					30%{
+						transform: translateY(15px);
+					}
+					60%{
+						transform: translateY(0) scale(0.3);
+					}
+					75%{
+						transform: translateY(0) scale(0.5)
+					}
+					100%{
+						margin-left: 100%;
+					}
+				}
+			}
+			@include m('1'){
+				left: 0;
+				top: 0;
+				//animation-delay: 1s;
+				animation-duration: 30s;
+			}
+
+			@include m('2'){
+				left: 20%;
+				top: 45px;
+				//animation-delay: -2s;
+			}
+
+			@include m('3'){
+				left: 45%;
+				top: -15px;
+				//animation-delay: 2s;
+				animation-duration: 45s;
+			}
+
+			@include m('4'){
+				top: 0;
+				left: 100%;
+				//animation-delay: 0.5s;
+
+			}
+
+			@include m('5'){
+				left: 90%;
+				top: -30px;
+				//animation-delay: 1s;
+				animation-duration: 20s;
+			}
+
+			@include m('6'){
+				top: 30px;
+				left: 80%;
+				//animation-delay: 4s;
+			}
+
+		}
+
+		@include ee('circle'){
+			@include absolute();
+			@include size(250px);
+			border-radius: 100%;
+			background-color: transparentize($color-brand-1, 0.8);
+			z-index: z-index('below');
+
+			@include min(sm){
+				@include size(450px);
+			}
+		}				
+	
+		@include ee('background'){
+			@include min(sm){
+				max-width: none;
+			}
+		}
+	}
+}
