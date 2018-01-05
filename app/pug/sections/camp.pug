@@ -19,10 +19,12 @@ include ../helpers/mixins
 			map: 'img/map-3.jpg'
 		}
 	];
-+b.SECTION.section.camp
++b.SECTION.camp.section
 	.container
-		+e.H3.title.title-md Приглашаем Вашего подростка в 1 из 3-х летних лагерей Польши
+		+e.H3.title.title-md Приглашаем Вашего подростка <br> в 1 из 3-х летних лагерей Польши
 		.row
 			each camp in camps
-				.col-12.col-sm-4
+				+e.column.col-12.col-sm-4
 					+camp(camp.image, camp.title, camp.map)
+		.text-center
+			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать подробнее о каждом из лагерей

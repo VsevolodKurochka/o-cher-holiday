@@ -1,11 +1,7 @@
 @include b('icon'){
 	&_center{
 		text-align: center;
-		@include max(sm){
-			&:not(:last-child){
-				margin-bottom: 30px;
-			}
-		}
+		margin-bottom: 30px;
 	}
 	&_center &{
 		@include e('inner'){
@@ -16,11 +12,11 @@
 		@include e('header'){
 			margin-bottom: 15px;
 			@include min(sm){
-				margin-bottom: 45px;
+				margin-bottom: 30px;
 			}
 		}
 		@include e('img'){
-			height: 90px;
+			height: 100px;
 		}
 	}
 	@include e('title'){

@@ -1066,11 +1066,11 @@ a, button {
 }
 
 .quadro_style-1 .quadro__part_5 {
-  background-color: #0057a2;
+  background-color: #fff;
 }
 
 .quadro_style-1 .quadro__part_7 {
-  background-color: #4faeff;
+  background-color: #0057a2;
 }
 
 .quadro_style-2 .quadro__part_3 {
@@ -1078,7 +1078,7 @@ a, button {
 }
 
 .quadro_style-2 .quadro__part_5 {
-  background-color: #0057a2;
+  background-color: #fff;
 }
 
 .quadro_style-2 .quadro__part_7 {
@@ -1094,13 +1094,8 @@ a, button {
 }
 
 .icon_center {
+  margin-bottom: 30px;
   text-align: center;
-}
-
-@media (max-width: 767px) {
-  .icon_center:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
 
 @media (min-width: 1025px) {
@@ -1116,12 +1111,12 @@ a, button {
 
 @media (min-width: 768px) {
   .icon_center .icon__header {
-    margin-bottom: 45px;
+    margin-bottom: 30px;
   }
 }
 
 .icon_center .icon__img {
-  height: 90px;
+  height: 100px;
 }
 
 .icon__title {
@@ -2526,22 +2521,16 @@ input[type="checkbox"]:checked + .control__indicator:before {
   color: #fff;
 }
 
-.benefits_organization {
-  background: url("../img/bg-benefit.jpg") 0 0 no-repeat;
+.benefits_camp {
+  background: url("../img/bg-benefit-camp.jpg") 0 0 no-repeat;
   -webkit-background-size: cover;
   background-size: cover;
 }
 
-.benefits_result {
-  background: url("../img/bg-benefit-result.jpg") 0 0 no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-.benefits_children {
-  background: url("../img/bg-benefit-children.jpg") 0 0 no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
+@media (min-width: 1025px) {
+  .benefits {
+    padding-bottom: 130px;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -2557,32 +2546,32 @@ input[type="checkbox"]:checked + .control__indicator:before {
   width: 100%;
   height: 100%;
   content: "";
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 87, 162, .84);
 }
 
 .benefits__quadro_1 {
-  top: -webkit-calc(100% - 34px);
-  top: calc(100% - 34px);
+  top: -webkit-calc(100% - 68px);
+  top: calc(100% - 68px);
   left: 0;
 }
 
 @media (min-width: 1025px) {
   .benefits__quadro_1 {
-    top: -webkit-calc(100% - 68px);
-    top: calc(100% - 68px);
+    top: -webkit-calc(100% - 136px);
+    top: calc(100% - 136px);
   }
 }
 
 .benefits__quadro_2 {
   right: 0;
-  bottom: -webkit-calc(100% - 34px);
-  bottom: calc(100% - 34px);
+  bottom: -webkit-calc(100% - 68px);
+  bottom: calc(100% - 68px);
 }
 
 @media (min-width: 1025px) {
   .benefits__quadro_2 {
-    bottom: -webkit-calc(100% - 68px);
-    bottom: calc(100% - 68px);
+    bottom: -webkit-calc(100% - 136px);
+    bottom: calc(100% - 136px);
   }
 }
 
@@ -2643,6 +2632,68 @@ input[type="checkbox"]:checked + .control__indicator:before {
     -ms-flex-align: center;
     align-items: center;
   }
+}
+
+.camp__title {
+  margin-bottom: 30px;
+  color: #0057a2;
+  text-align: center;
+}
+
+.camp__column {
+  margin-bottom: 30px;
+}
+
+.camp-item__header {
+  position: relative;
+  z-index: 1;
+  max-height: 280px;
+  overflow: hidden;
+  font-size: 0;
+}
+
+.camp-item__header:before {
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.camp-item__header-image {
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.camp-item__header-title {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 100%;
+  font-family: FormularBold;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .camp-item__header-title {
+    font-size: 25px;
+  }
+}
+
+.camp-item:hover .camp-item__header-image {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .contact {

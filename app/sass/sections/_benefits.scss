@@ -2,17 +2,12 @@
 	position: relative;
 	@include padding-y(90px, 65px);
 	color: $color-white;
-	@include m('organization'){
-		@include bg('../img/bg-benefit.jpg');
+	@include m('camp'){
+		@include bg('../img/bg-benefit-camp.jpg');
 	}
-	@include m('result'){
-		@include bg('../img/bg-benefit-result.jpg');
-	}
-	@include m('children'){
-		@include bg('../img/bg-benefit-children.jpg');
-	}
-	@media screen{
-		@include min(md){
+	@include min(md){
+		padding-bottom: 130px;
+		@media screen{
 			background-attachment: fixed;
 		}
 	}
@@ -21,21 +16,21 @@
 		left: 0;
 		top: 0;
 		@include size(100%);
-		background-color: transparentize($color-black, 0.4);
+		background-color: transparentize($color-brand-2, 0.16);
 	}
 	@include e('quadro'){
 		@include m('1'){
-			top: calc(100% - #{$quadro-size / 3});
+			top: calc(100% - #{$quadro-size / 1.5});
 			left: 0;
 			@include min(md){
-				top: calc(100% - #{$quadro-size_md / 3});
+				top: calc(100% - #{$quadro-size_md / 1.5});
 			}
 		}
 		@include m('2'){
-			bottom: calc(100% - #{$quadro-size / 3});
+			bottom: calc(100% - #{$quadro-size / 1.5});
 			right: 0;
 			@include min(md){
-				bottom: calc(100% - #{$quadro-size_md / 3});
+				bottom: calc(100% - #{$quadro-size_md / 1.5});
 			}
 		}
 	}

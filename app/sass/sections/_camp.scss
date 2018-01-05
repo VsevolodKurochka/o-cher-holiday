@@ -1,0 +1,60 @@
+@include b('camp'){
+	@include e('title'){
+		text-align: center;
+		margin-bottom: 30px;
+		color: $color-brand-2;
+	}
+
+	@include e('column'){
+		margin-bottom: 30px;
+	}
+
+	&-item{
+
+		@include e('header'){
+			position: relative;
+			overflow: hidden;
+			font-size: 0;
+			z-index: z-index('default');
+			max-height: 280px;
+
+			&:before{
+				@include pseudo();
+				@include absolute(0, null, null, 0);
+				@include size(100%);
+				background-color: transparentize($color-black, 0.5);
+				z-index: 1;
+			}
+
+			@include ee('image'){
+				@include transition();
+			}
+
+			@include ee('title'){
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 100%;
+				text-align: center;
+				color: $color-white;
+				font-size: 20px;
+				font-family: FormularBold;
+				z-index: 1;
+				@include min(sm){
+					font-size: 25px;
+				}
+			}
+
+		}
+
+		&:hover &{
+			@include e('header'){
+				@include ee('image'){
+					transform: scale(1.2);
+				}
+			}
+		}
+
+	}
+
+}
