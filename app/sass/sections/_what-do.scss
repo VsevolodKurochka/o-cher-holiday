@@ -1,0 +1,118 @@
+@include b('what-do'){
+	
+	@include padding-y(15px, 45px);
+
+	@include e('content'){
+		margin-bottom: 45px;
+
+		@include min(sm){
+			margin-bottom: 60px;
+		}
+	}
+
+	@include e('footer'){
+		text-align: center;
+	}
+
+	@include e('title'){
+		text-align: center;
+		margin-bottom: 45px;
+		@include min(sm){
+			margin-bottom: 60px;
+		}
+	}
+
+	@include e('item'){
+
+		&:not(:last-child){
+			margin-bottom: 45px;
+			@include min(sm){
+				margin-bottom: 90px;
+			}
+		}
+
+		&:nth-child(1){
+			.quadro{
+				right: 0;
+				bottom: calc(100% - #{$quadro-size / 1.5});
+				@include min(md){
+					bottom: calc(100% - #{$quadro-size_md / 1.5});
+				}
+			}
+		}
+
+		&:nth-child(2){
+			.quadro{
+				left: 0;
+				top: calc(100% - #{$quadro-size / 1.5});
+				@include min(md){
+					top: calc(100% - #{$quadro-size_md / 1.5});
+				}
+			}
+		}
+
+		&:nth-child(3){
+			.quadro{
+				right: 0;
+				bottom: calc(100% - #{$quadro-size / 1.5});
+				@include min(md){
+					bottom: calc(100% - #{$quadro-size_md / 1.5});
+				}
+			}
+		}
+		
+		@include min(sm){
+			align-items: center;
+
+			&:nth-child(odd){
+				flex-direction: row-reverse;
+			}
+		}
+
+		@include ee('header'){
+			margin-bottom: 30px;
+			
+			@include min(sm){
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+			}
+
+			@include ee('image'){
+				height: 80px;
+
+				@include min(sm){
+					margin-right: 15px;
+					flex-basis: 80px;
+				}
+			}
+
+			@include ee('title'){
+				font-family: 'FormularBold';
+				font-size: 25px;
+
+				@include min(sm){
+					font-size: 36px;
+					flex-basis: 0;
+					flex-grow: 1;
+				}
+			}
+
+		}
+
+		@include ee('image'){
+			@include ee('wrapper'){
+				position: relative;
+				font-size: 0;
+			}
+		}
+
+		@include ee('content'){
+			font-size: 16px;
+			> *:not(:last-child){
+				margin-bottom: 15px;
+			}
+		}
+
+	}
+}
