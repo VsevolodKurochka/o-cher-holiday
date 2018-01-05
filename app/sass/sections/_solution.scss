@@ -37,7 +37,7 @@
 		max-width: 90%;
 		@include margin-x(auto);
 		transform: none;
-		animation: solution_image 15s infinite alternate;
+		animation: solution_image 10s infinite alternate;
 		@at-root{
 			@keyframes solution_image{
 				50%{

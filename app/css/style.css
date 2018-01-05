@@ -3154,8 +3154,8 @@ input[type="checkbox"]:checked + .control__indicator:before {
   -webkit-transform: none;
   -ms-transform: none;
   transform: none;
-  -webkit-animation: solution_image 15s infinite alternate;
-  animation: solution_image 15s infinite alternate;
+  -webkit-animation: solution_image 10s infinite alternate;
+  animation: solution_image 10s infinite alternate;
 }
 
 @-webkit-keyframes solution_image {
