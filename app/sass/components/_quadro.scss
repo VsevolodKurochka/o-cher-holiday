@@ -5,10 +5,21 @@ $quadro-size_md: 204px;
 	flex-flow: row wrap;
 	@include absolute();
 	@include size($quadro-size);
+	background-color: transparent;
 	@include e('part'){
 		@include size($quadro-size / 3);
+		@include transition();
+		@for $i from 1 through 9 {
+			&_#{$i}{
+				transition-delay: (0.1 * $i) + s;
+			}
+		}
 	}
-	background-color: transparent;
+	&[data-emergence="hidden"] &{
+		@include e('part'){
+			transform: translateY(300%) rotate(90deg);
+		}
+	}
 	@include min(md){
 		@include size($quadro-size_md);
 		@include e('part'){

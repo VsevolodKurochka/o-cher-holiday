@@ -17,7 +17,7 @@
 		@include padding-y(75px, 50px);
 	}
 	@include min(md){
-		@include padding-y(160px, 90px);
+		@include padding-y(160px, 120px);
 		@media screen{
 			background-attachment: fixed;
 		}

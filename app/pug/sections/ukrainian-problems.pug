@@ -1,0 +1,20 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
++b.SECTION.section.ukrainian-problems
+	.container
+		+b.shadow._large._background._background-ukraine-map
+			+e.header
+				+e.P.subtitle Но глупо отрицать, что в последнее время с отдыхом для детей у нас всё совсем плохо:
+				+e.H3.title.title-md 
+					span.color-brand-2 Украина 
+					| - бесконечно красивая и дружелюбная страна…
+			.row
+				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-1.png', null)
+					| <span class="bold">В Крым уже не поедешь.</span> А ведь там столько прекрасных зон отдыха на любой вкус: на море, в горах, в лесах...
+				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-2.png', null)
+					| <span class="bold">С Одесской областью ситуация не лучше.</span> Особенно после недавнего пожара в лагере “Виктория”... даже вспоминать больно
+				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-3.png', null)
+					| <span class="bold">Остаются Карпаты.</span> Но Ваш ребенок там наверняка уже был…
+			+e.footer
+				p.title-xs.color-brand-2.text-center Не пора ли ему расширить кругозор?

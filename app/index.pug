@@ -6,8 +6,7 @@ block nav
 block header
 	include pug/layouts/header
 block content
-	include pug/sections/ukrainian-study
-	include pug/sections/future
+	include pug/sections/ukrainian-problems
 	include pug/sections/benefits
 	include pug/sections/security
 	include pug/sections/fast-consultation
@@ -50,8 +49,5 @@ block footer
 				+e.BUTTON.close(data-close="v-modal") &times;
 			+e.body
 				p Lorem....
-	+js("//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
-	+js("js/lib/jquery.cookies.2.2.0.js")
-	+js("js/lib/cookietimer.js")
 	+js("js/lib/smooth-scroll.min.js")
 	+js("js/vanilla.main.js")
