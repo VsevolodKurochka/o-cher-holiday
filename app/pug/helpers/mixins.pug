@@ -59,6 +59,6 @@ mixin review(wrapper, name, country, img)
 				p=country
 
 mixin quadro(classname)
-	+b.quadro(class=classname)
+	+b.quadro(data-emergence="hidden" class=classname)
 		- for(var i = 1; i <= 9; i++)
 			+e.SPAN.part(class="_" + i)

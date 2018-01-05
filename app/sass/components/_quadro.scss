@@ -6,6 +6,7 @@ $quadro-size_md: 204px;
 	@include absolute();
 	@include size($quadro-size);
 	background-color: transparent;
+	overflow: hidden;
 	@include e('part'){
 		@include size($quadro-size / 3);
 		@include transition();

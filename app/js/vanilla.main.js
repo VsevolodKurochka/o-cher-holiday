@@ -32,6 +32,8 @@ var exists = function exists(element) {
 (function () {
 	document.addEventListener("DOMContentLoaded", function () {
 
+		emergence.init();
+		
 		var classes = {
 			active: 'active',
 			menuActive: 'active'

@@ -7,16 +7,15 @@ block header
 	include pug/layouts/header
 block content
 	include pug/sections/ukrainian-problems
-	include pug/sections/benefits
-	include pug/sections/security
-	include pug/sections/fast-consultation
-	include pug/sections/chance
-	include pug/sections/results
-	include pug/sections/for-what
-	include pug/sections/answer
-	include pug/sections/reviews
-	include pug/sections/review-video
-	include pug/sections/map
+	//include pug/sections/benefits
+	//include pug/sections/security
+	//include pug/sections/fast-consultation
+	//include pug/sections/chance
+	//include pug/sections/results
+	//include pug/sections/for-what
+	//include pug/sections/answer
+	//include pug/sections/review-video
+	//include pug/sections/map
 block footer
 	include pug/layouts/footer
 	+b.modal#modal-form
@@ -49,5 +48,4 @@ block footer
 				+e.BUTTON.close(data-close="v-modal") &times;
 			+e.body
 				p Lorem....
-	+js("js/lib/smooth-scroll.min.js")
-	+js("js/vanilla.main.js")
+	
