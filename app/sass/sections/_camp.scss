@@ -28,6 +28,9 @@
 
 			@include ee('image'){
 				@include transition();
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
 			}
 
 			@include ee('title'){
@@ -45,6 +48,14 @@
 				}
 			}
 
+		}
+
+		@include e('map'){
+			@include ee('image'){
+				object-fit: cover;
+				width: 100%;
+				height: 100%;
+			}
 		}
 
 		&:hover &{

@@ -5,6 +5,9 @@
   margin-top: -125px;
   padding-top: 125px;
   font-size: 0;
+  @include max(sm){
+    padding-bottom: 45px;
+  }
   @include min(sm){
   	margin-top: -250px;
   	padding-top: 250px;
@@ -21,12 +24,10 @@
   	background-color: $color-white;
   	padding: 15px;
   	&:before{
-  		@include pseudo();
-  		border: 40px solid transparent;	
-  		@include max(sm){
-  			border-bottom: 40px solid $color-white;
-  		}
+  		
   		@include min(sm){
+        @include pseudo();
+        border: 40px solid transparent;
   			left: -80px;
   			top: 50%;
   			transform: translateY(-50%);

@@ -1,4 +1,9 @@
 @include b('ukrainian-problems'){
 	position: relative;
-	margin-top: -115px;
+	@include max(sm){
+		padding-top: 0;
+	}
+	@include min(sm){
+		margin-top: -115px;
+	}
 }

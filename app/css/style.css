@@ -2678,9 +2678,15 @@ input[type="checkbox"]:checked + .control__indicator:before {
 }
 
 .camp-item__header-image {
+  width: 100%;
+  height: 100%;
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
 }
 
 .camp-item__header-title {
@@ -2701,6 +2707,15 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .camp-item__header-title {
     font-size: 25px;
   }
+}
+
+.camp-item__map-image {
+  width: 100%;
+  height: 100%;
+
+  -o-object-fit: cover;
+
+  object-fit: cover;
 }
 
 .camp-item:hover .camp-item__header-image {
@@ -3196,6 +3211,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   background-image:     -ms-linear-gradient(90deg, #0057a2 0%, #0057a2 1%, rgba(0, 87, 162, 0) 100%);
 }
 
+@media (max-width: 767px) {
+  .question {
+    padding-bottom: 45px;
+  }
+}
+
 @media (min-width: 768px) {
   .question {
     padding-top: 250px;
@@ -3218,22 +3239,13 @@ input[type="checkbox"]:checked + .control__indicator:before {
   background-color: #fff;
 }
 
-.question__item:before {
-  position: absolute;
-  content: "";
-  border: 40px solid transparent;
-}
-
-@media (max-width: 767px) {
-  .question__item:before {
-    border-bottom: 40px solid #fff;
-  }
-}
-
 @media (min-width: 768px) {
   .question__item:before {
+    position: absolute;
     top: 50%;
     left: -80px;
+    content: "";
+    border: 40px solid transparent;
     border-right: 40px solid #fff;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -3372,7 +3384,18 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .ukrainian-problems {
   position: relative;
-  margin-top: -115px;
+}
+
+@media (max-width: 767px) {
+  .ukrainian-problems {
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .ukrainian-problems {
+    margin-top: -115px;
+  }
 }
 
 .vtabs__list {
