@@ -1,0 +1,86 @@
+@include b('standart-day'){
+	@include padding-y(45px, 45px);
+	@include e('row'){
+		@include min(sm){
+			align-items: center;
+		}
+	}
+	@include e('image'){
+		@include min(sm){
+			max-width: none;
+			position: relative;
+		}
+		@include min(md){
+			left: -230px;
+		}
+		@include ee('wrapper'){
+			font-size: 0;
+			position: relative;
+			@include b('quadro'){
+				right: 0;
+				bottom: calc(100% - #{$quadro-size / 1});
+				@include min(md){
+					bottom: calc(100% - #{$quadro-size_md / 1});
+				}
+			}
+		}
+	}
+	@include e('title'){
+		margin-bottom: 30px;
+		max-width: 90%;
+	}
+
+	@include e('footer'){
+		@include min(sm){
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+		}
+
+		@include ee('item'){
+			font-size: 13px;
+			@include min(sm){
+				flex-basis: 0;
+				flex-grow: 1;
+			}
+		}
+	}
+}
+
+@include b('timetable'){
+
+	margin-bottom: 30px;
+
+	@include e('item'){
+
+		&:not(:last-child){
+			margin-bottom: 5px;
+		}
+
+		@include min(sm){
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+		}
+
+		@include ee('time'){
+			font-family: 'FormularBold';
+			color: $color-brand-2;
+
+			@include min(sm){
+				flex-basis: 200px;
+				text-align: right;
+				padding-right: 15px;
+				border-right: 2px solid $color-brand-4;
+			}
+		}
+
+		@include ee('act'){
+			@include min(sm){
+				flex-basis: 0;
+				flex-grow: 1;
+				padding-left: 15px;
+			}
+		}
+	}
+}
