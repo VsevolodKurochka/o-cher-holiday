@@ -1,0 +1,12 @@
+@include b('site-header'){
+	@include e('description'){
+		margin-bottom: 30px;
+		font-size: 21px;
+		line-height: 1.1;
+		font-family: FormularBold;
+		@include min(sm){
+			max-width: 700px;
+			@include margin-x(auto);
+		}
+	}
+}

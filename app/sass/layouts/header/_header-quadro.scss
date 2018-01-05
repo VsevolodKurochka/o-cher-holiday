@@ -1,0 +1,9 @@
+@include b('site-header'){
+	@include e('quadro'){
+		top: calc(100% - #{$quadro-size / 3});
+		left: 0;
+		@include min(md){
+			top: calc(100% - #{$quadro-size_md / 1.5});
+		}
+	}
+}

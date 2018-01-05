@@ -9,6 +9,14 @@ include ../helpers/mixins
 			span.color-brand-3 языковой лагерь 
 			|в 
 			+e.SPAN.title-flag Польше
-		+e.P.description Поможем Вашему ребенку поступить в престижную польскую школу, лицей или техникум, после которого он сможет:
-		.text-center
-			+b.BUTTON.btn._navigation.effect._bounce-top(data-action="v-modal" data-open="#modal-form") Проконсультироваться и узнать даты заездов
+		+e.P.description 
+			| За 10-14 дней Ваш ребенок совместит приятное с полезным: 
+			span.color-brand-3 отдохнет среди первозданной природы 
+			| лесов и озер, плюс 
+			span.color-brand-3 выучит польский в естественной среде
+		+e.button-wrapper
+			+b.BUTTON.btn._size-lg._navigation.effect._bounce-top(data-action="modal" data-open="#modal-form") Проконсультироваться и узнать даты заездов
+		+e.info
+			+e.P.info-title Скрольте мышкой вниз, чтобы узнать больше!
+			+e.A.info-link(href="#section-ukraine-problems")
+				+e.IMG.info-image(src="img/mouse.svg")

@@ -1,0 +1,16 @@
+@include b('site-header'){
+	@include e('title'){
+		margin-bottom: 30px;
+		@include ee('flag'){
+			display: inline-block;
+			position: relative;
+			&:before{
+				@include pseudo();
+				left: 101%;
+				top: 0;
+				@include size(27px, 18px);
+				@include bg('../img/flag-poland.png');
+			}
+		}
+	}
+}

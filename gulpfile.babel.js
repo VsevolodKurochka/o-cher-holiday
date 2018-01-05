@@ -42,7 +42,6 @@ import sass 						from 'gulp-sass';
 import sassGlob 				from 'gulp-sass-glob';
 import autoprefixer 		from 'gulp-autoprefixer';
 import csscomb 					from 'gulp-csscomb';
-import sassdoc 					from 'sassdoc';
 
 
 // JS
@@ -63,18 +62,6 @@ gulp.src(['./package.json'])
 // SASS
 gulp.task('sass', () =>
 	gulp.src("app/sass/**/*.scss")
-		.pipe(sassdoc({
-			dest: 'app/sassdoc',
-			verbose: true,
-			display: {
-				access: ['public', 'private'],
-				alias: true,
-				watermark: true,
-			},
-			groups: {
-				undefined: 'All'
-			}
-		}))
 		.pipe(sassGlob())
 		.pipe(sass({
 			outputStyle: 'expanded'

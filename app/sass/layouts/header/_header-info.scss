@@ -1,0 +1,47 @@
+@include b('site-header'){
+	@include e('info'){
+		text-align: center;
+		margin-top: 45px;
+		color: #656565;
+		@include ee('title'){
+			margin-bottom: 15px;
+		}
+		@include ee('image'){
+			position: relative;
+			top: 0;
+			height: 50px;
+			animation: info__image-translate 2s infinite;
+			transform: translate3d(0, 0, 0);
+		  backface-visibility: hidden;
+		  perspective: 1000px;
+			@include transition();
+			&:hover{
+				animation: info__image-shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+			}
+			@at-root{
+				@keyframes info__image-translate{
+					50%{
+						top: 5px;
+					}
+				}
+				@keyframes info__image-shake {
+					10%, 90% {
+						transform: translate3d(-1px, 0, 0);
+					}
+					
+					20%, 80% {
+						transform: translate3d(2px, 0, 0);
+					}
+
+					30%, 50%, 70% {
+						transform: translate3d(-4px, 0, 0);
+					}
+
+					40%, 60% {
+						transform: translate3d(4px, 0, 0);
+					}
+				}
+			}
+		}
+	}
+}
