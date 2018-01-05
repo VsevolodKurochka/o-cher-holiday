@@ -1,0 +1,50 @@
+@include b('solution'){
+	@include min(sm){
+		padding-top: 120px;
+	}
+
+	@include e('row'){
+		@include min(sm){
+			align-items: center;
+		}
+	}
+
+	@include e('column'){
+		@include m('image'){
+			position: relative;
+			text-align: center;
+		}
+	}
+
+	@include e('title'){
+		margin-bottom: 30px;
+	}
+
+	@include e('circle'){
+		@include absolute(50%, null, null, 50%);
+		transform: translate(-50%,-50%);
+		@include size(250px);
+		border-radius: 100%;
+		background-color: transparentize($color-brand-1, 0.8);
+		@include min(sm){
+			@include size(450px);
+		}
+	}
+
+	@include e('image'){
+		position: relative;
+		z-index: 1;
+		max-width: 90%;
+		@include margin-x(auto);
+		transform: none;
+		animation: solution_image 15s infinite alternate;
+		@at-root{
+			@keyframes solution_image{
+				50%{
+					transform: translate(10px, 10px) scale(0.8) rotate(15deg);
+				}
+			}
+		}
+	}
+
+}
