@@ -32,8 +32,10 @@ var exists = function exists(element) {
 (function () {
 	document.addEventListener("DOMContentLoaded", function () {
 
-		emergence.init();
-		
+		// WOw JS
+		var wow = new WOW();
+		wow.init();
+
 		var classes = {
 			active: 'active',
 			menuActive: 'active'

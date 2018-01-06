@@ -26,6 +26,10 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
+		// WOw JS
+			var wow = new WOW();
+			wow.init();
+
 		const classes = {
 			active: 'active',
 			menuActive: 'active'
