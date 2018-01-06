@@ -16,16 +16,13 @@
 	&_flag{
 		li{
 			padding-left: 35px;
-			&:nth-child(odd){
-				font-family: 'FormularBold';
-			}
 			&:not(:last-child){
-				margin-bottom: 5px;
+				margin-bottom: 10px;
 			}
 			&:after{
 				top: 5px;
 				left: 0;
-				@include bg('../img/list-flag.png');
+				@include bg('../img/list-flag.svg');
 				@include size(21px, 23px);
 			}
 		}

@@ -1,0 +1,21 @@
+@include b('price'){
+	@include padding-y(30px);
+	@include min(sm){
+		@include padding-y(60px);
+	}
+
+	@include e('title'){
+		text-align: center;
+		margin-bottom: 45px;
+	}
+
+	@include e('content'){
+		margin-bottom: 30px;
+	}
+
+	@include e('row'){
+		@include min(sm){
+			align-items: center;
+		}
+	}
+}

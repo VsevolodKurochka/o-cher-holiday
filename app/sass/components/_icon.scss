@@ -104,4 +104,13 @@
 			}
 		}
 	}
+
+	&_fit &{
+		@include e('inner'){
+			@include min(md){
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+		}
+	}
 }
