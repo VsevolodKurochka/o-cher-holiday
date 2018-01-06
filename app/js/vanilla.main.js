@@ -39,11 +39,20 @@ var exists = function exists(element) {
 		// Scroll
 		var headerContainer = document.getElementById('site-header-container');
 		var headerContainerHeight = headerContainer.offsetHeight;
-		log(headerContainerHeight);
+
+		var range = 450;
+
 		window.addEventListener('scroll', function () {
 			var scroll = this.scrollY;
 			if (scroll < headerContainerHeight + 100) {
 				headerContainer.style.transform = 'translate(0, ' + scroll / 10 + '%)';
+				headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
+
+				if (headerContainer.style.opacity > '1') {
+					headerContainer.style.opacity = '1';
+				} else if (headerContainer.style.opacity < '0') {
+					headerContainer.style.opacity = '0';
+				}
 			}
 		});
 
