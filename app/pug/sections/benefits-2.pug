@@ -5,19 +5,19 @@ include ../helpers/mixins
 	var benefitClass = '_left-icon col-12 col-sm-6';
 	var benefits_future = [
 		{
-			image: 'img/icon-benefit-6.svg',
+			image: 'img/icon-benefit-7.svg',
 			content: 'Выучит язык на уровне, достаточном для учебы в Польше. А главное, сделает это играючи, без переутомлений и сложных ДЗ'
 		},
 		{
-			image: 'img/icon-benefit-7.svg',
+			image: 'img/icon-benefit-8.svg',
 			content: 'Станет самостоятельнее, находясь на расстоянии от родителей. Научится ответственности и целеустремленности'
 		},
 		{
-			image: 'img/icon-benefit-8.svg',
+			image: 'img/icon-benefit-9.svg',
 			content: 'Адаптируется к европейской среде и расширит кругозор. Это ускорит его развитие и поможет достичь успеха '
 		},
 		{
-			image: 'img/icon-benefit-9.svg',
+			image: 'img/icon-benefit-10.svg',
 			content: 'Заведет друзей из Европы, к которым сможет ездить в гости. Станет более коммуникабельным и научится заводить связи'
 		}
 	];
@@ -30,7 +30,7 @@ include ../helpers/mixins
 			span.color-brand-1 Вы не узнаете своего ребенка
 			br
 			|(в хорошем смысле) после летнего лагеря в Польше
-		.row
+		+e.row.row
 			each benefit in benefits_future
 				+icon(benefitClass, benefit.image, null)
 					p=benefit.content

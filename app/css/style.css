@@ -1214,7 +1214,7 @@ a, button {
 }
 
 .icon_left-icon .icon__img {
-  height: 90px;
+  height: 60px;
 }
 
 .icon_left-icon .icon__title {
@@ -1223,9 +1223,6 @@ a, button {
 }
 
 @media (min-width: 768px) {
-  .icon_left-icon .icon__inner {
-    min-height: 140px;
-  }
   .icon_left-icon .icon__img {
     position: absolute;
     top: 50%;
@@ -1236,7 +1233,7 @@ a, button {
     transform: translateY(-50%);
   }
   .icon_left-icon .icon__title, .icon_left-icon .icon__body {
-    padding-left: 110px;
+    padding-left: 120px;
   }
   .icon_left-icon .icon__title {
     font-size: 30px;
@@ -1244,12 +1241,6 @@ a, button {
 }
 
 @media (min-width: 1025px) {
-  .icon_left-icon .icon__img {
-    height: 140px;
-  }
-  .icon_left-icon .icon__title, .icon_left-icon .icon__body {
-    padding-left: 180px;
-  }
   .icon_left-icon .icon__title {
     font-size: 45px;
   }
@@ -2616,6 +2607,14 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .benefits__video-iframe {
     width: 650px;
     height: 350px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .benefits__row {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 

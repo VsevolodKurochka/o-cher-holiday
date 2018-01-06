@@ -50,4 +50,11 @@
 			}
 		}
 	}
+
+	@include e('row'){
+		@include min(md){
+			width: 90%;
+			@include margin-x(auto);
+		}
+	}
 }
