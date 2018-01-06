@@ -68,33 +68,43 @@
 				flex-direction: row-reverse;
 			}
 		}
+	
+		@include ee('column'){
+			&:not(:last-child){
+				margin-bottom: 30px;
+			}
+		}
 
 		@include ee('header'){
 			margin-bottom: 30px;
 			
-			@include min(sm){
-				display: flex;
-				flex-flow: row wrap;
-				align-items: center;
-			}
+			//@include min(sm){
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+			//}
 
 			@include ee('image'){
 				height: 80px;
 
-				@include min(sm){
-					margin-right: 15px;
-					flex-basis: 80px;
-				}
+				//@include min(sm){
+				margin-right: 15px;
+				flex-basis: 80px;
+				//}
 			}
 
 			@include ee('title'){
 				font-family: 'FormularBold';
-				font-size: 25px;
-
+				font-size: 22px;
+				line-height: 1.1;
+				flex-basis: 0;
+				flex-grow: 1;
 				@include min(sm){
+					font-size: 30px;
+					
+				}
+				@include min(md){
 					font-size: 36px;
-					flex-basis: 0;
-					flex-grow: 1;
 				}
 			}
 

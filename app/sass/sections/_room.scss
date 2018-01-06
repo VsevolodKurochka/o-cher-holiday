@@ -1,0 +1,71 @@
+@include b('room'){
+	
+	padding-top: 30px;
+
+	@include e('title'){
+		text-align: center;
+		margin-bottom: 45px;
+	}
+
+	@include e('item'){
+		font-size: 0;
+		border: 10px solid $color-brand-2;
+		@include transition();
+		&:hover{
+			border-color: $color-brand-1;
+		}
+		@at-root{
+			%room__item-highlight{
+				border-color: $color-brand-1;
+				&:hover{
+					border-color: $color-brand-2;
+				}
+			}
+		}
+		@include m('3'){
+			@extend %room__item-highlight;
+		}
+		@include m('4'){
+			@extend %room__item-highlight;
+		}
+		@include ee('image'){
+			height: 250px;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	@include e('column'){
+		@include relative();
+		margin-bottom: 30px;
+		@include m('1'){
+			@include min(sm){
+				left: 15px;
+				top: 30px;
+				margin-bottom: 45px;
+			}
+		}
+		@include m('2'){
+			@include min(sm){
+				top: 15px;
+			}
+		}
+		@include m('3'){
+			@include min(sm){
+				left: -15px;
+			}
+		}
+		@include m('5'){
+			@include min(sm){
+				top: -15px;
+				left: -15px;
+			}
+		}
+		@include m('6'){
+			@include min(sm){
+				left: -30px;
+				top: -30px;
+			}
+		}
+	}
+}

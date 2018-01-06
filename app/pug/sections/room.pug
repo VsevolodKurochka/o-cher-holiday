@@ -1,0 +1,39 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var sectionTitle = 'Организационные моменты';
+
+	var room_increment = 0;
+	var rooms = [
+		{
+			small: 'img/room-1-small.jpg'
+		},
+		{
+			small: 'img/room-2-small.jpg'
+		},
+		{
+			small: 'img/room-3-small.jpg'
+		},
+		{
+			small: 'img/room-4-small.jpg'
+		},
+		{
+			small: 'img/room-5-small.jpg'
+		},
+		{
+			small: 'img/room-6-small.jpg'
+		}
+	];
+
++b.SECTION.room
+	.container
+		+e.H3.title.title-md
+			span.color-brand-2 Как выглядят 
+			| номера и территория лагерей
+		+e.row.row
+			each room in rooms
+				- room_increment++;
+				+e.column(class="_" + room_increment + " col-12 col-sm-6 col-md-4")
+					+e.item(class="_" + room_increment)
+						+e.item-image(src=room.small)

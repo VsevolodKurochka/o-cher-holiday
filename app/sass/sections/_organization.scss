@@ -1,7 +1,11 @@
 @include b('organization'){
 
 	overflow: hidden;
-	@include padding-y(45px);
+	@include padding-y(15px, 45px);
+
+	@include min(sm){
+		@include padding-y(45px);
+	}
 
 	@include e('title'){
 		margin-bottom: 30px;
@@ -22,29 +26,26 @@
 		}
 
 		@include ee('header'){
-			@include min(sm){
-				display: flex;
-				align-items: center;
-				flex-flow: row wrap;
-				flex-basis: 250px;
+			display: flex;
+			align-items: center;
+			flex-flow: row wrap;
+			flex-basis: 250px;
+			@include max(sm){
+				margin-bottom: 10px;
 			}
 		}
 
 		@include ee('image'){
 			height: 40px;
-			@include min(sm){
-				flex-basis: 40px;
-				margin-right: 15px;
-			}
+			flex-basis: 40px;
+			margin-right: 15px;
 		}
 
 		@include ee('title'){
+			flex-basis: 0;
+			flex-grow: 1;
 			font-family: 'FormularBold';
 			color: $color-brand-2;
-			@include min(sm){
-				flex-basis: 0;
-				flex-grow: 1;
-			}
 		}
 
 		@include ee('content'){

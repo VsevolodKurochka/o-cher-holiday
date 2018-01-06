@@ -1,5 +1,5 @@
 @include b('standart-day'){
-	@include padding-y(45px, 45px);
+	@include padding-y(30px, 45px);
 	@include e('row'){
 		@include min(sm){
 			align-items: center;
@@ -7,10 +7,11 @@
 	}
 	@include e('image'){
 		@include min(sm){
-			max-width: none;
-			position: relative;
+			
 		}
 		@include min(md){
+			max-width: none;
+			position: relative;
 			left: -230px;
 		}
 		@include ee('wrapper'){
@@ -31,7 +32,7 @@
 	}
 
 	@include e('footer'){
-		@include min(sm){
+		@include min(md){
 			display: flex;
 			flex-flow: row wrap;
 			align-items: center;
@@ -39,7 +40,10 @@
 
 		@include ee('item'){
 			font-size: 13px;
-			@include min(sm){
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+			@include min(md){
 				flex-basis: 0;
 				flex-grow: 1;
 			}
@@ -52,15 +56,24 @@
 	margin-bottom: 30px;
 
 	@include e('item'){
-
+	
 		&:not(:last-child){
-			margin-bottom: 5px;
+			margin-bottom: 10px;
+		}
+
+		@include max(sm){
+			border-left: 2px solid $color-brand-4;
+			padding-left: 15px;
 		}
 
 		@include min(sm){
 			display: flex;
 			flex-flow: row wrap;
 			align-items: center;
+			font-size: 15px;
+			&:not(:last-child){
+				margin-bottom: 5px;
+			}
 		}
 
 		@include ee('time'){
@@ -68,10 +81,14 @@
 			color: $color-brand-2;
 
 			@include min(sm){
-				flex-basis: 200px;
+				flex-basis: 130px;
 				text-align: right;
 				padding-right: 15px;
 				border-right: 2px solid $color-brand-4;
+			}
+
+			@include min(md){
+				flex-basis: 200px;
 			}
 		}
 

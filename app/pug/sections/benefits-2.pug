@@ -1,0 +1,33 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var benefitClass = '_left-icon col-12 col-sm-6';
+	var benefits_future = [
+		{
+			image: 'img/icon-benefit-6.svg',
+			content: 'Выучит язык на уровне, достаточном для учебы в Польше. А главное, сделает это играючи, без переутомлений и сложных ДЗ'
+		},
+		{
+			image: 'img/icon-benefit-7.svg',
+			content: 'Станет самостоятельнее, находясь на расстоянии от родителей. Научится ответственности и целеустремленности'
+		},
+		{
+			image: 'img/icon-benefit-8.svg',
+			content: 'Адаптируется к европейской среде и расширит кругозор. Это ускорит его развитие и поможет достичь успеха '
+		},
+		{
+			image: 'img/icon-benefit-9.svg',
+			content: 'Заведет друзей из Европы, к которым сможет ездить в гости. Станет более коммуникабельным и научится заводить связи'
+		}
+	];
+
++b.SECTION.benefits._camp
+	+quadro('_style-1 benefits__quadro_1')
+	+quadro('_style-2 benefits__quadro_2')
+	.container
+		+b.H3.title-md.title-section В каждом из лагерей ребенка ждут:
+		.row
+			each benefit in benefits_future
+				+icon(benefitClass, benefit.image, null)
+					p=benefit.content
