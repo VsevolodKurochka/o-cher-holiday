@@ -2547,6 +2547,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   background-size: cover;
 }
 
+.benefits_children-future {
+  background: url("../img/bg-benefit-children-future.jpg") 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
 @media (min-width: 1025px) {
   .benefits {
     padding-bottom: 130px;
@@ -3291,6 +3297,13 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .room {
   padding-top: 30px;
+  padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .room {
+    padding-bottom: 60px;
+  }
 }
 
 .room__title {

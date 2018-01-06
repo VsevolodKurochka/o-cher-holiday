@@ -5,6 +5,9 @@
 	@include m('camp'){
 		@include bg('../img/bg-benefit-camp.jpg');
 	}
+	@include m('children-future'){
+		@include bg('../img/bg-benefit-children-future.jpg');
+	}
 	@include min(md){
 		padding-bottom: 130px;
 		@media screen{

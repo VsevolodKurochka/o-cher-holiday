@@ -1,6 +1,10 @@
 @include b('room'){
 	
-	padding-top: 30px;
+	@include padding-y(30px, 45px);
+
+	@include min(sm){
+		padding-bottom: 60px;
+	}
 
 	@include e('title'){
 		text-align: center;

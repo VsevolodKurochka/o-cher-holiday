@@ -22,11 +22,14 @@ include ../helpers/mixins
 		}
 	];
 
-+b.SECTION.benefits._camp
++b.SECTION.benefits._children-future
 	+quadro('_style-1 benefits__quadro_1')
 	+quadro('_style-2 benefits__quadro_2')
 	.container
-		+b.H3.title-md.title-section В каждом из лагерей ребенка ждут:
+		+b.H3.title-md.title-section
+			span.color-brand-1 Вы не узнаете своего ребенка
+			br
+			|(в хорошем смысле) после летнего лагеря в Польше
 		.row
 			each benefit in benefits_future
 				+icon(benefitClass, benefit.image, null)
