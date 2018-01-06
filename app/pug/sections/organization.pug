@@ -1,12 +1,33 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
-
+-
+	var sectionTitle = 'Организационные моменты';
+	var gallery = [
+		{
+			small: 'img/gallery-1.jpg'
+		},
+		{
+			small: 'img/gallery-2.jpg'
+		},
+		{
+			small: 'img/gallery-3.jpg'
+		},
+		{
+			small: 'img/gallery-4.jpg'
+		},
+		{
+			small: 'img/gallery-5.jpg'
+		},
+		{
+			small: 'img/gallery-6.jpg'
+		}
+	];
 +b.SECTION.organization
 	.container
 		+e.row.row
 			.col-12.col-md-8
-				+e.H3.title.title-md Организационные моменты
+				+e.H3.title.title-md=sectionTitle
 				+e.content
 					+e.item
 						+e.item-header
@@ -45,15 +66,6 @@ include ../helpers/mixins
 							p Языковой лагерь подходит детям 11-16 лет. Ребенок должен быть здоров и, самое главное - не бояться оставаться без родителей.
 			.col-12.col-md-4
 				+e.UL.gallery
-					+e.LI.gallery-item
-						img(src="img/gallery-1.jpg")
-					+e.LI.gallery-item
-						img(src="img/gallery-2.jpg")
-					+e.LI.gallery-item
-						img(src="img/gallery-3.jpg")
-					+e.LI.gallery-item
-						img(src="img/gallery-4.jpg")
-					+e.LI.gallery-item
-						img(src="img/gallery-5.jpg")
-					+e.LI.gallery-item
-						img(src="img/gallery-6.jpg")
+					each picture in gallery
+						+e.LI.gallery-item
+							+e.IMG.gallery-item-image(src=picture.small)

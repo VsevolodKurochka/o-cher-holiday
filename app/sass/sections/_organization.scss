@@ -1,5 +1,6 @@
 @include b('organization'){
-	
+
+	overflow: hidden;
 	@include padding-y(45px);
 
 	@include e('title'){
@@ -56,5 +57,36 @@
 	}
 
 	// Gallery
-	
+	@include e('gallery'){
+		list-style: none;
+		font-size: 0;
+		@include min(sm){
+			display: flex;
+			flex-flow: row wrap;
+			width: 635px;
+		}
+
+		@include ee('item'){
+			overflow: hidden;
+			@include min(sm){
+				flex-basis: 50%;
+			}
+
+			@include ee('image'){
+				@include transition();
+				backface-visibility: hidden;
+				transform: translateZ(0);
+				@include min(sm){
+					width: 100%;
+					height: 235px;
+				}
+			}
+
+			&:hover &{
+				@include ee('image'){
+					transform: scale(1.2);
+				}
+			}
+		}
+	}
 }
