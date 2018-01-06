@@ -69,6 +69,12 @@
 
 		@include ee('item'){
 			overflow: hidden;
+
+			@include max(sm){
+				&:not(:last-child){
+					margin-bottom: 30px;
+				}
+			}
 			@include min(sm){
 				flex-basis: 50%;
 			}

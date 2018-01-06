@@ -1,10 +1,8 @@
 @include b('contact'){
 	position: relative;
 	z-index: z-index('default');
+	overflow: hidden;
 	@include padding-y(#{$quadro-size / 3}, null);
-	@include max(sm){
-		margin-top: 150px;
-	}
 	@include min(sm){
 		@include padding-y(200px);
 	}

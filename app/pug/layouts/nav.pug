@@ -18,6 +18,6 @@ include ../helpers/mixins
 				+e.NAV.menu.col-12.col-md-10#js-navigation
 					for item in navigation
 						+e.LI.menu-item
-							a(href=item.link)=item.name
+							a(data-scroll href=item.link)=item.name
 					+e.LI.menu-item
 						+b.BUTTON.btn._navigation.effect._bounce-top(data-action="modal" data-open="#modal-form") Записаться на консультацию

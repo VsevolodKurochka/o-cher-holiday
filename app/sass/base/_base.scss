@@ -2,6 +2,7 @@ body{
   color: $color-general;  
   font-size: 18px;
   line-height: 1.42857143;
+  overflow-x: hidden;
   @extend .font-general !optional;
   @extend .font-weight-regular !optional;
 }

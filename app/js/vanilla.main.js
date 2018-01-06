@@ -91,7 +91,7 @@ var exists = function exists(element) {
 		// Navigation links
 
 		var scroll = new SmoothScroll('a[href*="#"]', {
-			speed: 1000
+			offset: 70
 		});
 
 		var jsNavLinks = document.querySelectorAll('.nav__menu a[href*="#"]');
@@ -99,15 +99,8 @@ var exists = function exists(element) {
 		for (var i = 0; i < jsNavLinks.length; i++) {
 			jsNavLinks[i].addEventListener('click', function (e) {
 
-				e.preventDefault();
-
-				var vnavhref = this.getAttribute("href").replace("#", "");
-				var vnavscrollAnchor = document.getElementById(vnavhref);
-
 				removeClass(jsNavBtn, classes.active);
 				removeClass(jsNav, classes.menuActive);
-
-				//scrollTo(document.body, vnavscrollAnchor.offsetTop, 600);
 			});
 		}
 

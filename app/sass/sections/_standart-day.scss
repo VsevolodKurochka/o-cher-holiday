@@ -6,8 +6,8 @@
 		}
 	}
 	@include e('image'){
-		@include min(sm){
-			
+		@include max(sm){
+			margin-bottom: 15px;
 		}
 		@include min(md){
 			max-width: none;

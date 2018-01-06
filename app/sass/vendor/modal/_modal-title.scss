@@ -1,15 +1,15 @@
 .#{$themeModal}{
 	&__title{
 		position: relative;
-		margin-bottom: 20px;
 		padding-bottom: 7.5px;
-		text-align: center;
-		font-size: 16px;
-		text-transform: uppercase;
-		letter-spacing: 1.5px;
+		margin-bottom: 20px;
+		font-size: 14px;
 		line-height: 1.3;
 		color: #000;
-		@extend .font-weight-bold !optional;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 1.1px;
+		font-family: 'FormularBold';
 		&:after{
 			@include pseudo();
 			top: 100%;
