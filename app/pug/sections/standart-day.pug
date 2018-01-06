@@ -5,47 +5,58 @@ include ../helpers/mixins
 	var timeTable = [
 		{
 			time: '07:30',
-			act: 'Подъем'
+			act: 'Подъем',
+			delay: '0.1s'
 		},
 		{
 			time: '08:00',
-			act: 'Утренняя гимнастика'
+			act: 'Утренняя гимнастика',
+			delay: '0.11s'
 		},
 		{
 			time: '9:00',
-			act: 'Завтрак'
+			act: 'Завтрак',
+			delay: '0.12s'
 		},
 		{
 			time: '9:30 - 13:30',
-			act: 'Занятия польским языком (группы по 10-12 человек)'
+			act: 'Занятия польским языком (группы по 10-12 человек)',
+			delay: '0.13s'
 		},
 		{
 			time: '14:00',
-			act: 'Обед'
+			act: 'Обед',
+			delay: '0.14s'
 		},
 		{
 			time: '15:00 - 16:00/18:00',
-			act: 'Экскурсия/спорт/игровые активности'
+			act: 'Экскурсия/спорт/игровые активности',
+			delay: '0.15s'
 		},
 		{
 			time: '16:30',
-			act: 'Полдник'
+			act: 'Полдник',
+			delay: '0.16s'
 		},
 		{
 			time: '17.00 – 18.00',
-			act: 'Свободное время'
+			act: 'Свободное время',
+			delay: '0.17s'
 		},
 		{
 			time: '18:00',
-			act: 'Ужин'
+			act: 'Ужин',
+			delay: '0.18s'
 		},
 		{
 			time: '18:30 - 21:00',
-			act: 'Настольные игры/дискотека/просмотр фильма'
+			act: 'Настольные игры/дискотека/просмотр фильма',
+			delay: '0.19s'
 		},
 		{
 			time: '22:00',
-			act: 'Отбой'
+			act: 'Отбой',
+			delay: '0.2s'
 		}
 	];
 
@@ -57,14 +68,14 @@ include ../helpers/mixins
 					+e.image(src="img/standart-day.jpg")
 					+quadro('_style-2')
 			.col-12.col-sm-6.col-md-8
-				+e.H3.title.title-md
+				+e.H3.title.title-md.wow.fadeInUp
 					| Вот как будет проходить 					
 					span.color-brand-2 стандартный день Вашего ребенка 
 					| в языковом лагере*
 				+b.timetable
 					each timeItem in timeTable
-						+day(timeItem.time, timeItem.act)
-				+e.footer
+						+day(timeItem.time, timeItem.act)(data-wow-delay=timeItem.delay)
+				+e.footer.wow.fadeInUp
 					+e.footer-item
 						+b.BUTTON.btn._size-lg._brand-1._shadow-brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Задать вопросы специалисту
 					+e.footer-item

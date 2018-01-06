@@ -2383,6 +2383,9 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .site-header__title {
   margin-bottom: 30px;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
 .site-header__title-flag {

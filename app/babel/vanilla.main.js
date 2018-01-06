@@ -26,9 +26,20 @@
 (function(){
 	document.addEventListener("DOMContentLoaded", function(){
 
-		// WOw JS
+		// WOW JS
 			var wow = new WOW();
 			wow.init();
+
+		// Scroll
+		const headerContainer = document.getElementById('site-header-container');
+		const headerContainerHeight = headerContainer.offsetHeight;
+		log(headerContainerHeight);
+		window.addEventListener('scroll', function(){
+			let scroll = this.scrollY;
+			if(scroll < headerContainerHeight + 100){
+				headerContainer.style.transform = `translate(0, ${scroll / 10}%)`;
+			}
+		});
 
 		const classes = {
 			active: 'active',

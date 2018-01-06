@@ -1,6 +1,7 @@
 @include b('site-header'){
 	@include e('title'){
 		margin-bottom: 30px;
+		@include transition();
 		@include ee('flag'){
 			display: inline-block;
 			position: relative;

@@ -6,17 +6,20 @@ include ../helpers/mixins
 		{
 			image: 'img/camp-1.jpg',
 			title: 'Полчин-Здруй',
-			map: 'img/map-1.jpg'
+			map: 'img/map-1.jpg',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/camp-2.jpg',
 			title: 'Остров-Любельский',
-			map: 'img/map-2.jpg'
+			map: 'img/map-2.jpg',
+			delay: '0.3s'
 		},
 		{
 			image: 'img/camp-3.jpg',
 			title: 'Закопана',
-			map: 'img/map-3.jpg'
+			map: 'img/map-3.jpg',
+			delay: '0.5s'
 		}
 	];
 +b.SECTION.camp.section
@@ -24,7 +27,7 @@ include ../helpers/mixins
 		+e.H3.title.title-md Приглашаем Вашего подростка <br> в 1 из 3-х летних лагерей Польши
 		.row
 			each camp in camps
-				+e.column.col-12.col-sm-4
+				+e.column.col-12.col-sm-4.wow.fadeInUp(data-wow-delay=camp.delay)
 					+camp(camp.image, camp.title, camp.map)
-		.text-center
+		.text-center.wow.fadeInUp(data-wow-delay="0.2s")
 			+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать подробнее о каждом из лагерей

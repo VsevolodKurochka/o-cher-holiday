@@ -2,33 +2,36 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 -
-	var languageCampsColumnClass = '_center col-12 col-sm-4';
+	var languageCampsColumnClass = '_center col-12 col-sm-4 wow fadeInUp';
 	var languageCamps = [
 		{
 			image: 'img/icon-language-camp-1.svg',
 			title: 'Без переутомлений',
-			content: 'Дети учат язык в игровой форме. Их никто не заставляет, а они сами бегут на уроки, обгоняя друг друга'
+			content: 'Дети учат язык в игровой форме. Их никто не заставляет, а они сами бегут на уроки, обгоняя друг друга',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/icon-language-camp-2.svg',
 			title: 'Естественная среда',
-			content: 'Факт, что в естественной языковой среде язык учится в разы быстрее и легче, чем на самых лучших курсах в родной стране'
+			content: 'Факт, что в естественной языковой среде язык учится в разы быстрее и легче, чем на самых лучших курсах в родной стране',
+			delay: '0.2s'
 		},
 		{
 			image: 'img/icon-language-camp-3.svg',
 			title: 'Компетентные преподаватели',
-			content: 'Учителя в лагерях знают подход к нашим детям - за 10 лет они обучили более 100 подростков из Украины'
+			content: 'Учителя в лагерях знают подход к нашим детям - за 10 лет они обучили более 100 подростков из Украины',
+			delay: '0.3s'
 		}
 	];
 
 +b.SECTION.language-camp.section
 	.container
 		+b.shadow._large._background._background-poland-arms
-			+e.header
+			+e.header.wow.fadeInUp
 				+e.H3.title.title-md Языковой лагерь - <span class="color-brand-2">лучший выбор</span>
 			.row
 				each languageCamp in languageCamps
-					+icon(languageCampsColumnClass, languageCamp.image, languageCamp.title)
+					+icon(languageCampsColumnClass, languageCamp.image, languageCamp.title)(data-wow-delay=languageCamp.delay)
 						p=languageCamp.content
-			+e.footer
+			+e.footer.wow.fadeInUp
 				+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать подробнее о каждом из лагерей

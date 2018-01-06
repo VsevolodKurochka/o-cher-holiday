@@ -1,6 +1,9 @@
 include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
+-
+	var problemClass = '_center col-12 col-sm-4 wow fadeInUp';
+
 +b.SECTION.section.ukrainian-problems
 	.container
 		+b.shadow._large._background._background-ukraine-map
@@ -10,11 +13,11 @@ include ../helpers/mixins
 					span.color-brand-2 Украина 
 					| - бесконечно красивая и дружелюбная страна…
 			.row
-				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-1.png', null)
+				+icon(problemClass, 'img/icon-ukraine-1.png', null)(data-wow-delay="0.2s")
 					| <span class="bold">В Крым уже не поедешь.</span> А ведь там столько прекрасных зон отдыха на любой вкус: на море, в горах, в лесах...
-				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-2.png', null)
+				+icon(problemClass, 'img/icon-ukraine-2.png', null)(data-wow-delay="0.25s")
 					| <span class="bold">С Одесской областью ситуация не лучше.</span> Особенно после недавнего пожара в лагере “Виктория”... даже вспоминать больно
-				+icon('_center col-12 col-sm-4', 'img/icon-ukraine-3.png', null)
+				+icon(problemClass, 'img/icon-ukraine-3.png', null)(data-wow-delay="0.3s")
 					| <span class="bold">Остаются Карпаты.</span> Но Ваш ребенок там наверняка уже был…
 			+e.footer
 				p.title-xs.color-brand-2.text-center Не пора ли ему расширить кругозор?

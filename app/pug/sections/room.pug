@@ -7,22 +7,28 @@ include ../helpers/mixins
 	var room_increment = 0;
 	var rooms = [
 		{
-			small: 'img/room-1-small.jpg'
+			small: 'img/room-1-small.jpg',
+			delay: '0.1s'
 		},
 		{
-			small: 'img/room-2-small.jpg'
+			small: 'img/room-2-small.jpg',
+			delay: '0.2s'
 		},
 		{
-			small: 'img/room-3-small.jpg'
+			small: 'img/room-3-small.jpg',
+			delay: '0.25s'
 		},
 		{
-			small: 'img/room-4-small.jpg'
+			small: 'img/room-4-small.jpg',
+			delay: '0.3s'
 		},
 		{
-			small: 'img/room-5-small.jpg'
+			small: 'img/room-5-small.jpg',
+			delay: '0.35s'
 		},
 		{
-			small: 'img/room-6-small.jpg'
+			small: 'img/room-6-small.jpg',
+			delay: '0.4s'
 		}
 	];
 
@@ -34,6 +40,6 @@ include ../helpers/mixins
 		+e.row.row
 			each room in rooms
 				- room_increment++;
-				+e.column(class="_" + room_increment + " col-12 col-sm-6 col-md-4")
+				+e.column(class="_" + room_increment + " col-12 col-sm-6 col-md-4 wow fadeInUp" data-wow-delay=room.delay)
 					+e.item(class="_" + room_increment)
 						+e.item-image(src=room.small)

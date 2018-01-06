@@ -2,23 +2,27 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 -
-	var benefitClass = '_left-icon _fit col-12 col-sm-6';
+	var benefitClass = '_left-icon _fit col-12 col-sm-6 wow fadeInUp';
 	var benefits_future = [
 		{
 			image: 'img/icon-benefit-7.svg',
-			content: 'Выучит язык на уровне, достаточном для учебы в Польше. А главное, сделает это играючи, без переутомлений и сложных ДЗ'
+			content: 'Выучит язык на уровне, достаточном для учебы в Польше. А главное, сделает это играючи, без переутомлений и сложных ДЗ',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/icon-benefit-8.svg',
-			content: 'Станет самостоятельнее, находясь на расстоянии от родителей. Научится ответственности и целеустремленности'
+			content: 'Станет самостоятельнее, находясь на расстоянии от родителей. Научится ответственности и целеустремленности',
+			delay: '0.21s'
 		},
 		{
 			image: 'img/icon-benefit-9.svg',
-			content: 'Адаптируется к европейской среде и расширит кругозор. Это ускорит его развитие и поможет достичь успеха '
+			content: 'Адаптируется к европейской среде и расширит кругозор. Это ускорит его развитие и поможет достичь успеха ',
+			delay: '0.31s'
 		},
 		{
 			image: 'img/icon-benefit-10.svg',
-			content: 'Заведет друзей из Европы, к которым сможет ездить в гости. Станет более коммуникабельным и научится заводить связи'
+			content: 'Заведет друзей из Европы, к которым сможет ездить в гости. Станет более коммуникабельным и научится заводить связи',
+			delay: '0.41s'
 		}
 	];
 
@@ -26,11 +30,11 @@ include ../helpers/mixins
 	+quadro('_style-1 benefits__quadro_1')
 	+quadro('_style-2 benefits__quadro_2')
 	.container
-		+b.H3.title-md.title-section
+		+b.H3.title-md.title-section.wow.fadeInUp
 			span.color-brand-1 Вы не узнаете своего ребенка
 			br
 			|(в хорошем смысле) после летнего лагеря в Польше
 		+e.row.row
 			each benefit in benefits_future
-				+icon(benefitClass, benefit.image, null)
+				+icon(benefitClass, benefit.image, null)(data-wow-delay=benefit.delay)
 					p=benefit.content

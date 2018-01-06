@@ -2,39 +2,43 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 -
-	var companyClass = '_left-icon _fit _title-color-brand-2 col-12 col-sm-6';
+	var companyClass = '_left-icon _fit _title-color-brand-2 col-12 col-sm-6 wow fadeInLeft';
 	var company_benefits = [
 		{
 			image: 'img/icon-company-benefit-1.svg',
 			title: '1000+',
-			content: 'Украинских детей уже ездили в языковые лагеря в Польше с нашей помощью'
+			content: 'Украинских детей уже ездили в языковые лагеря в Польше с нашей помощью',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/icon-company-benefit-2.svg',
 			title: 'Берем на себя все нюансы',
-			content: 'От сбора документов, до безопасной доставки Ваших детей в лагерь и назад'
+			content: 'От сбора документов, до безопасной доставки Ваших детей в лагерь и назад',
+			delay: '0.2s'
 		},
 		{
 			image: 'img/icon-company-benefit-3.svg',
 			title: 'Предоставляем сопровождающих',
-			content: 'Они находятся в лагере всё время, обеспечивают комфорт и безопасность Ваших детей'
+			content: 'Они находятся в лагере всё время, обеспечивают комфорт и безопасность Ваших детей',
+			delay: '0.25s'
 		},
 		{
 			image: 'img/icon-company-benefit-4.svg',
 			title: 'Работаем официально',
-			content: 'Оформляем договор и отвечаем за то, чтобы Ваш ребенок хорошо отдохнул и вернулся в целости и сохранности'
+			content: 'Оформляем договор и отвечаем за то, чтобы Ваш ребенок хорошо отдохнул и вернулся в целости и сохранности',
+			delay: '0.3s'
 		}
 	];
 +b.SECTION.section.company
 	.container
 		+b.shadow._company
 			+e.header
-				+e.H3.title.title-md 
+				+e.H3.title.title-md.wow.fadeInUp
 					| Организатор поездки в языковой лагерь
 					br
 					| - компания 
 					span.color-brand-1 ОсвитаМаркет
 			+e.row._fit.row
 				each benefit in company_benefits
-					+icon(companyClass, benefit.image, benefit.title)
+					+icon(companyClass, benefit.image, benefit.title)(data-wow-delay=benefit.delay)
 						p=benefit.content

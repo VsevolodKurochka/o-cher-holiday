@@ -7,7 +7,7 @@ include ../helpers/mixins
 			span.color-brand-2 Чем заняться  
 			| в лагере
 		+e.content
-			+e.item.row
+			+e.item.row.wow.fadeInLeft(data-wow-delay="0.1s")
 				+e.item-column._image.col-12.col-sm-6
 					+e.item-image-wrapper
 						+e.item-image(src="img/what-do-1.jpg")
@@ -19,7 +19,7 @@ include ../helpers/mixins
 					+e.item-content
 						p В каждом лагере есть футбольное поле, теннисные столы, бассейн, спортзал, баскетбольные и волейбольные площадки.
 						p Ваш ребенок укрепит здоровье, проведет время весело и с пользой.
-			+e.item.row
+			+e.item.row.wow.fadeInRight(data-wow-delay="0.1s")
 				+e.item-column._image.col-12.col-sm-6
 					+e.item-image-wrapper
 						+e.item-image(src="img/what-do-2.jpg")
@@ -40,7 +40,7 @@ include ../helpers/mixins
 							li Выезд в Каземиж-Дольный над Вислой
 							li Экскурсия по Берлину (для языкового лагеря в Полчине-Здруй)
 						p * Экскурсии отличаются, в зависимости от лагеря. <br>Оставьте заявку на этой странице, чтобы узнать подробности
-			+e.item.row
+			+e.item.row.wow.fadeInLeft(data-wow-delay="0.1s")
 				+e.item-column._image.col-12.col-sm-6
 					+e.item-image-wrapper
 						+e.item-image(src="img/what-do-3.jpg")
@@ -51,5 +51,5 @@ include ../helpers/mixins
 						+e.P.item-header-title Активности<br>на любой вкус
 					+e.item-content
 						p Когда детей накроет приятная усталость после спорта и экскурсий, они могут расслабиться: посмотреть фильм, сходить на дискотеку или поиграть в настольные игры.
-		+e.footer
+		+e.footer.wow.fadeInUp
 			+b.BUTTON.btn._size-lg._brand-1._shadow-brand-1.effect._bounce-top(data-action="modal" data-open="#modal-form") Узнать стоимость и выбрать подходящий лагерь

@@ -2,31 +2,37 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 -
-	var benefitClass = '_center col-12 col-sm-6 col-md-4';
+	var benefitClass = '_center col-12 col-sm-6 col-md-4 wow fadeInUp';
 	var benefits = [
 		{
 			image: 'img/icon-benefit-1.svg',
-			content: 'Комфортные номера с ТВ и горячей/холодной водой. По 2-3 человека в номере'
+			content: 'Комфортные номера с ТВ и горячей/холодной водой. По 2-3 человека в номере',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/icon-benefit-2.svg',
-			content: '4-разовое сбалансированное питание. Только свежие европейские продукты и никаких снеков'
+			content: '4-разовое сбалансированное питание. Только свежие европейские продукты и никаких снеков',
+			delay: '0.2s'
 		},
 		{
 			image: 'img/icon-benefit-3.svg',
-			content: 'Пешие и автобусные экскурсии по близлежащим городам и местностям'
+			content: 'Пешие и автобусные экскурсии по близлежащим городам и местностям',
+			delay: '0.25s'
 		},
 		{
 			image: 'img/icon-benefit-4.svg',
-			content: 'Ежедневные активности: гимнастика, караоке, просмотр фильмов, спорт'
+			content: 'Ежедневные активности: гимнастика, караоке, просмотр фильмов, спорт',
+			delay: '0.3s'
 		},
 		{
 			image: 'img/icon-benefit-5.svg',
-			content: 'Внимательный персонал, который уже 10-й год работает с детьми из Украины'
+			content: 'Внимательный персонал, который уже 10-й год работает с детьми из Украины',
+			delay: '0.35s'
 		},
 		{
 			image: 'img/icon-benefit-6.svg',
-			content: 'Изучение польского языка для будущего поступления в польский лицей/колледж'
+			content: 'Изучение польского языка для будущего поступления в польский лицей/колледж',
+			delay: '0.4s'
 		}
 	];
 
@@ -37,5 +43,5 @@ include ../helpers/mixins
 		+b.H3.title-md.title-section В каждом из лагерей ребенка ждут:
 		.row
 			each benefit in benefits
-				+icon(benefitClass, benefit.image, null)
+				+icon(benefitClass, benefit.image, null)(data-wow-delay=benefit.delay)
 					p=benefit.content

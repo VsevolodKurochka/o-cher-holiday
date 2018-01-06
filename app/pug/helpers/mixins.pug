@@ -37,7 +37,7 @@ mixin menu-item(isLink,href, name)
 			block
 
 mixin icon(classname, img, title)
-	+b.icon(class=classname)
+	+b.icon(class=classname)&attributes(attributes)
 		+e.inner
 			+e.header
 				+e.img(src=img)
@@ -67,7 +67,7 @@ mixin camp(image, title, map)
 			+e.IMG.map-image(src=map)
 
 mixin day(time, act)
-	+e.item
+	+e.item.wow.fadeInUp&attributes(attributes)
 		+e.P.item-time=time
 		+e.P.item-act=act
 

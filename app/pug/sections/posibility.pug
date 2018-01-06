@@ -2,23 +2,27 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 -
-	var posibilityClass = '_center col-12 col-sm-6 col-md-3';
+	var posibilityClass = '_center col-12 col-sm-6 col-md-3 wow fadeInUp';
 	var posibilities = [
 		{
 			image: 'img/icon-posibility-1.svg',
-			content: 'Отказаться от уроков польского'
+			content: 'Отказаться от уроков польского',
+			delay: '0.1s'
 		},
 		{
 			image: 'img/icon-posibility-2.svg',
-			content: 'Скорректировать программу под своего ребенка, в зависимости от того, что ему нравится'
+			content: 'Скорректировать программу под своего ребенка, в зависимости от того, что ему нравится',
+			delay: '0.15s'
 		},
 		{
 			image: 'img/icon-posibility-3.svg',
-			content: 'Выбрать лагерь, котором много детей (до 200) или поменьше (50-60)'
+			content: 'Выбрать лагерь, котором много детей (до 200) или поменьше (50-60)',
+			delay: '0.2s'
 		},
 		{
 			image: 'img/icon-posibility-4.svg',
-			content: 'Есть лагеря где почти все дети из Украины, а есть те, где больше ребят из Европы. Вы можете выбрать любой'
+			content: 'Есть лагеря где почти все дети из Украины, а есть те, где больше ребят из Европы. Вы можете выбрать любой',
+			delay: '0.25s'
 		}
 	];
 
@@ -29,5 +33,5 @@ include ../helpers/mixins
 			|. Тем более, что Вы можете:
 		.row
 			each posibility in posibilities
-				+icon(posibilityClass, posibility.image, null)
+				+icon(posibilityClass, posibility.image, null)(data-wow-delay=posibility.delay)
 					p=posibility.content

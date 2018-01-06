@@ -2,11 +2,11 @@ include ../bem/index
 include ../helpers/config
 +b.SECTION.price
 	.container
-		+e.H3.title.title-md.color-brand-2 Что входит в стоимость поездки?
+		+e.H3.title.title-md.color-brand-2.wow.fadeInUp Что входит в стоимость поездки?
 		+e.row.row
-			.col-12.col-sm-5
+			.col-12.col-sm-5.wow.fadeInLeft(data-wow-delay="0.1s")
 				img(src="img/price-image.png")
-			.col-12.col-sm-7
+			.col-12.col-sm-7.wow.fadeInRight(data-wow-delay="0.2s")
 				+e.content
 					+b.UL.list._flag
 						li 10-14 дней отдыха в одном из лагерей
