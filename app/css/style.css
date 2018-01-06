@@ -1109,6 +1109,18 @@ a, button {
   background-color: #4faeff;
 }
 
+.quadro_style-4 .quadro__part_3 {
+  background-color: #4faeff;
+}
+
+.quadro_style-4 .quadro__part_5 {
+  background-color: #0057a2;
+}
+
+.quadro_style-4 .quadro__part_7 {
+  background-color: #4faeff;
+}
+
 .icon_center {
   margin-bottom: 30px;
   text-align: center;
@@ -2698,6 +2710,16 @@ input[type="checkbox"]:checked + .control__indicator:before {
   transform: scale(1.2);
 }
 
+.company {
+  padding-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .company {
+    padding-bottom: 90px;
+  }
+}
+
 .contact {
   position: relative;
   z-index: 1;
@@ -2744,7 +2766,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
 @media (min-width: 768px) {
   .contact__info {
     width: 450px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
 }
 
@@ -2836,6 +2858,10 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .contact__info-link {
     font-size: 24px;
   }
+}
+
+.contact__info-window {
+  font-family: 'FormularBold';
 }
 
 .contact__quadro_2 {

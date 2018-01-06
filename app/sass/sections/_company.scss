@@ -1,0 +1,6 @@
+@include b('company'){
+	padding-bottom: 45px;
+	@include min(sm){
+		padding-bottom: 90px;
+	}
+}

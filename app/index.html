@@ -580,7 +580,7 @@
                                                                                                                                                                                                               </p>
                                                                                                                                                                             </div>
                                                                                                                                                                             <div class="organization__item-content">
-                                                                                                                                                                              <p>Дети собираются в одном месте, садятся в автобусы и отправляются в лагерь. Дорога занимает ХХ часов. С ними едут русскоговорящие представители компании “ОсвитаМаркет”. Они также остаются в лагере на весь заезд, чтобы потом сопроводить детей домой.</p>
+                                                                                                                                                                              <p>Дети собираются в одном месте, садятся в автобусы и отправляются в лагерь. Дорога занимает 18 часов. С ними едут русскоговорящие представители компании “ОсвитаМаркет”. Они также остаются в лагере на весь заезд, чтобы потом сопроводить детей домой.</p>
                                                                                                                                                                             </div>
                                                                                                                                           </div>
                                                                                                                                           <div class="organization__item">
@@ -717,7 +717,7 @@
                                                                                                                                     <li>Проживание в номерах на 2-4 человека.<br>Душ, туалет и телевизор в каждом номере</li>
                                                                                                                                     <li>4-разовое сбалансированное питание</li>
                                                                                                                                     <li>Экскурсии</li>
-                                                                                                                                    <li>Уроки польского с профессиональными преподавателями (Х раз за смену)</li>
+                                                                                                                                    <li>Уроки польского с профессиональными преподавателями (15 раз за смену)</li>
                                                                                                                                     <li>Учебники, диски, ручки, тетради и вообще всё, что нужно для учебы</li>
                                                                                                                                     <li>Бесплатное пользование Wi-fi на территории лагеря</li>
                                                                                                                                     <li>Карманные деньги ребенку, от 50 евро (по желанию)</li>
@@ -743,7 +743,7 @@
                                                                                                                                 <div class="icon icon_left-icon icon_fit icon_title-color-brand-2 col-12 col-sm-6">
                                                                                                                                                                   <div class="icon__inner">
                                                                                                                                                                                                     <div class="icon__header"><img class="icon__img" src="img/icon-company-benefit-1.svg" alt="" role="presentation"/>
-                                                                                                                                                                                                                                      <p class="icon__title">ХХХ+
+                                                                                                                                                                                                                                      <p class="icon__title">1000+
                                                                                                                                                                                                                                       </p>
                                                                                                                                                                                                     </div>
                                                                                                                                                                                                     <div class="icon__body">
@@ -788,13 +788,56 @@
                                                             </div>
                                   </div>
                                 </section>
+                                <section class="contact">
+                                                                  <div class="quadro quadro_style-4 contact__quadro contact__quadro_2" data-emergence="hidden"><span class="quadro__part quadro__part_1"></span><span class="quadro__part quadro__part_2"></span><span class="quadro__part quadro__part_3"></span><span class="quadro__part quadro__part_4"></span><span class="quadro__part quadro__part_5"></span><span class="quadro__part quadro__part_6"></span><span class="quadro__part quadro__part_7"></span><span class="quadro__part quadro__part_8"></span><span class="quadro__part quadro__part_9"></span>
+                                                                  </div>
+                                                                  <div class="contact__map" id="map">
+                                                                  </div>
+                                                                  <div class="contact__info">
+                                                                                                    <p class="contact__info-title"><span class="color-brand-2">Звоните</span>, <br>приходите в гости
+                                                                                                    </p>
+                                                                                                    <div class="contact__info-part contact__info-part_phone"><a class="contact__info-link" href="tel: +38 (063) 550 03 20 ">+38 (063) 550 03 20</a><a class="contact__info-link" href="tel: +38 (066) 538 27 00 ">+38 (066) 538 27 00</a><a class="contact__info-link" href="tel: +38 (066) 538 27 00 ">+38 (066) 538 27 00</a><a class="contact__info-link" href="tel: +4 (879) 045 79 50 ">+4 (879) 045 79 50</a>
+                                                                                                    </div>
+                                                                                                    <div class="contact__info-part contact__info-part_email"><a class="contact__info-link" href="mailto: info@osvitamarket.com ">info@osvitamarket.com</a>
+                                                                                                    </div>
+                                                                  </div>
+                                </section>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4vqrgTZ81rE5juLYbXT6Tg7y6T8Ii0Nc&amp;callback=initMap&amp;language=ru"></script>
+        <script>
+          function initMap() {
+          	var uluru = {lat: 50.434675, lng: 30.514878};
+          	var map = new google.maps.Map(document.getElementById('map'), {
+          		zoom: 15,
+          		center: uluru,
+          		disableDefaultUI: true,
+          		scrollwheel: false
+          	});
+          	
+          	var title = 'г. Киев, ул. Антоновича, 33 В, оф. 11';
+          
+          	var contentString = '<div class="contact__info-window">'+ title + '</div>';
+          
+          	var infowindow = new google.maps.InfoWindow({
+          		content: contentString
+          	});
+          
+          	var marker = new google.maps.Marker({
+          		position: uluru,
+          		map: map,
+          		title: title,
+          		icon: 'img/map-marker.png'
+          	});
+          
+          	infowindow.open(map, marker);
+          }
+        </script>
         <!--include pug/sections/fast-consultation-->
         <!--include pug/sections/chance-->
         <!--include pug/sections/results-->
         <!--include pug/sections/for-what-->
         <!--include pug/sections/answer-->
         <!--include pug/sections/review-video-->
-        <!--include pug/sections/map-->
+        <!---->
       </div>
                         <footer class="site-footer">
                                                   <div class="site-footer__container container">

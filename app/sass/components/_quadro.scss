@@ -83,4 +83,17 @@ $quadro-size_md: 204px;
 			}
 		}
 	}
+	&_style-4 &{
+		@include e('part'){
+			@include m('3'){
+				background-color: $color-brand-3;
+			}
+			@include m('5'){
+				background-color: $color-brand-2;
+			}
+			@include m('7'){
+				background-color: $color-brand-3;
+			}
+		}
+	}
 }
