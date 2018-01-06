@@ -62,9 +62,6 @@
 	}
 	&_left-icon{
 		margin-bottom: 45px;
-		@include min(sm){
-			margin-bottom: 90px;
-		}
 	}
 	&_left-icon &{
 		@include e('inner'){
@@ -74,7 +71,7 @@
 			height: 60px;
 		}
 		@include e('title'){
-			font-size: 30px;
+			font-size: 20px;
 			margin-bottom: 10px;
 		}
 		@include min(sm){
@@ -87,21 +84,22 @@
 			}
 			@at-root{
 				%left-icon-padding{
-					padding-left: 120px;
+					padding-left: 100px;
 				}
 			}
 			@include e('title'){
 				@extend %left-icon-padding;
-				font-size: 30px;
+				font-size: 24px;
 			}
 			@include e('body'){
 				@extend %left-icon-padding;
 			}
 		}
-		@include min(md){
-			@include e('title'){
-				font-size: 45px;
-			}
+	}
+
+	&_title-color-brand-2 &{
+		@include e('title'){
+			color: $color-brand-2;
 		}
 	}
 

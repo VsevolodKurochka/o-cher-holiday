@@ -1,0 +1,40 @@
+include ../bem/index
+include ../helpers/config
+include ../helpers/mixins
+-
+	var companyClass = '_left-icon _fit _title-color-brand-2 col-12 col-sm-6';
+	var company_benefits = [
+		{
+			image: 'img/icon-company-benefit-1.svg',
+			title: 'ХХХ+',
+			content: 'Украинских детей уже ездили в языковые лагеря в Польше с нашей помощью'
+		},
+		{
+			image: 'img/icon-company-benefit-2.svg',
+			title: 'Берем на себя все нюансы',
+			content: 'От сбора документов, до безопасной доставки Ваших детей в лагерь и назад'
+		},
+		{
+			image: 'img/icon-company-benefit-3.svg',
+			title: 'Предоставляем сопровождающих',
+			content: 'Они находятся в лагере всё время, обеспечивают комфорт и безопасность Ваших детей'
+		},
+		{
+			image: 'img/icon-company-benefit-4.svg',
+			title: 'Работаем официально',
+			content: 'Оформляем договор и отвечаем за то, чтобы Ваш ребенок хорошо отдохнул и вернулся в целости и сохранности'
+		}
+	];
++b.SECTION.section.company
+	.container
+		+b.shadow._company
+			+e.header
+				+e.H3.title.title-md 
+					| Организатор поездки в языковой лагерь
+					br
+					| - компания 
+					span.color-brand-1 ОсвитаМаркет
+			+e.row._fit.row
+				each benefit in company_benefits
+					+icon(companyClass, benefit.image, benefit.title)
+						p=benefit.content

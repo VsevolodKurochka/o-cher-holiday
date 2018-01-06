@@ -45,20 +45,25 @@
 		text-align: center;
 		margin-bottom: 30px;
 	}
+
 	@include e('title'){
 		font-family: 'FormularBold';
 	}
+
 	@include e('subtitle'){
 		margin-bottom: 15px;
 		font-size: 21px;
 	}
+
 	@include e('content'){
 		@include padding-x(10px);
 	}
+
 	@include e('footer'){
 		margin-top: 30px;
 		text-align: center;
 	}
+
 	&_large{
 		padding: 45px 15px;
 		@include min(md){
@@ -66,9 +71,24 @@
 			padding-bottom: 70px;
 		}
 	}
+
 	&_large &{
 		@include e('header'){
 			margin-bottom: 60px;
+		}
+	}
+
+	&_company{
+		
+	}
+
+
+	@include e('row'){
+		@include m('fit'){
+			@include min(md){
+				width: 85%;
+				@include margin-x(auto);
+			}
 		}
 	}
 }
