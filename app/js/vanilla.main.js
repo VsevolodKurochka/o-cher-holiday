@@ -40,7 +40,7 @@ var exists = function exists(element) {
 		var headerContainer = document.getElementById('site-header-container');
 		var headerContainerHeight = headerContainer.offsetHeight;
 
-		var range = 450;
+		var range = 200;
 
 		window.addEventListener('scroll', function () {
 			var scroll = this.scrollY;

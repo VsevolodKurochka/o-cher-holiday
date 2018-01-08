@@ -2287,15 +2287,20 @@ input[type="checkbox"]:checked + .control__indicator:before {
 
 .site-header__info {
   margin-top: 45px;
-  color: #656565;
   text-align: center;
 }
 
-.site-header__info-title {
-  margin-bottom: 15px;
+.site-header__info-link {
+  color: #656565;
+  text-decoration: none;
 }
 
-.site-header__info-image {
+.site-header__info-link-title {
+  margin-bottom: 15px;
+  color: inherit;
+}
+
+.site-header__info-link-image {
   position: relative;
   top: 0;
   height: 50px;
@@ -2314,7 +2319,7 @@ input[type="checkbox"]:checked + .control__indicator:before {
   perspective: 1000px;
 }
 
-.site-header__info-image:hover {
+.site-header__info-link-image:hover {
   -webkit-animation: info__image-shake .82s cubic-bezier(.36, .07, .19, .97) both;
   animation: info__image-shake .82s cubic-bezier(.36, .07, .19, .97) both;
 }

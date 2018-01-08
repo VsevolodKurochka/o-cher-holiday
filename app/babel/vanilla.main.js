@@ -34,7 +34,7 @@
 		const headerContainer = document.getElementById('site-header-container');
 		const headerContainerHeight = headerContainer.offsetHeight;
 		
-		const range = 450;
+		const range = 200;
 
 		window.addEventListener('scroll', function(){
 			let scroll = this.scrollY;
