@@ -2902,6 +2902,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   z-index: 1;
 }
 
+@media (max-width: 767px) {
+  .europe__picture {
+    margin-top: 45px;
+  }
+}
+
 .europe__picture-sky {
   position: relative;
 }
@@ -2924,6 +2930,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
+}
+
+@media (max-width: 767px) {
+  .europe__picture-plane {
+    max-width: 150px;
+  }
 }
 
 @-webkit-keyframes plane-move {
@@ -2971,6 +2983,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
+}
+
+@media (max-width: 767px) {
+  .europe__picture-cloud {
+    max-width: 40px;
+  }
 }
 
 @-webkit-keyframes cloud-move {
@@ -3051,6 +3069,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   .europe__picture-circle {
     width: 450px;
     height: 450px;
+  }
+}
+
+@media (max-width: 767px) {
+  .europe__picture-background {
+    margin-top: 120px;
   }
 }
 

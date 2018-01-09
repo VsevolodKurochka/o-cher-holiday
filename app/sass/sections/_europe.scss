@@ -16,6 +16,9 @@ $europe-plain-height: 60px;
 		@include relative();
 		z-index: z-index('default');
 		
+		@include max(sm){
+			margin-top: 45px;
+		}
 
 		@include ee('sky'){
 			@include relative();
@@ -28,6 +31,9 @@ $europe-plain-height: 60px;
 			perspective: 1000px;
 			animation: plane-move 50s linear infinite;
 			@include transition();
+			@include max(sm){
+				max-width: 150px;
+			}
 			@at-root{
 				@keyframes plane-move{
 					0%{
@@ -56,6 +62,9 @@ $europe-plain-height: 60px;
 			perspective: 1000px;
 			animation: cloud-move 100s linear infinite;
 			@include transition();
+			@include max(sm){
+				max-width: 40px;
+			}
 			@at-root{
 				@keyframes cloud-move{
 					0%{
@@ -127,6 +136,9 @@ $europe-plain-height: 60px;
 		}				
 	
 		@include ee('background'){
+			@include max(sm){
+				margin-top: 120px;
+			}
 			@include min(sm){
 				max-width: none;
 			}
