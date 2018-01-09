@@ -32,6 +32,9 @@ var exists = function exists(element) {
 (function () {
 	document.addEventListener("DOMContentLoaded", function () {
 
+		// Emergence
+		emergence.init();
+
 		// WOW JS
 		var wow = new WOW();
 		wow.init();

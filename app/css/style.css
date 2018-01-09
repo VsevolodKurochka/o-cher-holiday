@@ -2733,7 +2733,6 @@ input[type="checkbox"]:checked + .control__indicator:before {
   position: relative;
   z-index: 1;
   padding-top: 34px;
-  overflow: hidden;
 }
 
 @media (min-width: 768px) {
