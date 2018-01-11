@@ -1,9 +1,83 @@
 
 <header class="site-header site-header_question">
-  <div class="container" id="site-header-container">
-    <h1 class="site-header__title title-lg wow fadeInUp" id="site-header-title">Спасибо за Вашу заявку!
+  <div class="container">
+    <h1 class="site-header__title site-header__title_small title-lg wow fadeInUp">Спасибо за Вашу заявку!
     </h1>
-    <p class="site-header__description wow fadeInUp" data-wow-delay="0.25s">Мы свяжемся с Вами в ближайшее время.
+    <p class="site-header__description site-header__description_small wow fadeInUp" data-wow-delay="0.25s">Мы свяжемся с Вами в ближайшее время.
     </p>
+    <div class="quiz">
+      <div class="quiz__header">
+        <h2 class="quiz__title">Ответьте всего на 3 вопроса
+        </h2>
+        <h3 class="quiz__subtitle">Чтобы консультация была максимально полезной
+        </h3>
+      </div>
+      <div class="quiz__content">
+        <div class="quiz__item">
+          <p class="quiz__item-title">1. Ваш ребенок уже поступил в учебное заведение Польши?
+          </p>
+          <div class="control-group control-group_inline">
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Да
+                </p>
+                <input type="radio" name="question_1" value="Да"/><span class="control__indicator"></span>
+              </label>
+            </div>
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Нет
+                </p>
+                <input type="radio" name="question_1" value="Нет"/><span class="control__indicator"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz__item">
+          <p class="quiz__item-title">2. Вы планируете обучение ребенка польскому языку в Лагере?
+          </p>
+          <div class="control-group control-group_inline">
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Да
+                </p>
+                <input type="radio" name="question_2" value="Да"/><span class="control__indicator"></span>
+              </label>
+            </div>
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Нет
+                </p>
+                <input type="radio" name="question_2" value="Нет"/><span class="control__indicator"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="quiz__item">
+          <p class="quiz__item-title">3. Вы уже являетесь клиентом Osvita-Market?
+          </p>
+          <div class="control-group control-group_inline">
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Да
+                </p>
+                <input type="radio" name="question_3" value="Да"/><span class="control__indicator"></span>
+              </label>
+            </div>
+            <div class="control control_default">
+              <label>
+                <p class="control__text">Нет
+                </p>
+                <input type="radio" name="question_3" value="Нет"/><span class="control__indicator"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quiz__footer">
+        <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" id="quiz-send">Отправить ответы
+        </button>
+      </div>
+    </div>
   </div>
 </header>

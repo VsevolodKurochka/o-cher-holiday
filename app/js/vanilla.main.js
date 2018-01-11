@@ -40,24 +40,26 @@ var exists = function exists(element) {
 		wow.init();
 
 		// Scroll
-		var headerContainer = document.getElementById('site-header-container');
-		var headerContainerHeight = headerContainer.offsetHeight;
+		if (exists(document.getElementById('site-header-container'))) {
+			var headerContainer = document.getElementById('site-header-container');
+			var headerContainerHeight = headerContainer.offsetHeight;
 
-		var range = 200;
+			var range = 200;
 
-		window.addEventListener('scroll', function () {
-			var scroll = this.scrollY;
-			if (scroll < headerContainerHeight + 100) {
-				headerContainer.style.transform = 'translate(0, ' + scroll / 10 + '%)';
-				headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
+			window.addEventListener('scroll', function () {
+				var scroll = this.scrollY;
+				if (scroll < headerContainerHeight + 100) {
+					headerContainer.style.transform = 'translate(0, ' + scroll / 10 + '%)';
+					headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
 
-				if (headerContainer.style.opacity > '1') {
-					headerContainer.style.opacity = '1';
-				} else if (headerContainer.style.opacity < '0') {
-					headerContainer.style.opacity = '0';
+					if (headerContainer.style.opacity > '1') {
+						headerContainer.style.opacity = '1';
+					} else if (headerContainer.style.opacity < '0') {
+						headerContainer.style.opacity = '0';
+					}
 				}
-			}
-		});
+			});
+		}
 
 		var classes = {
 			active: 'active',
@@ -126,16 +128,18 @@ var exists = function exists(element) {
 		}
 
 		// Window scrolling JS
-		var jsNavWrapper = document.getElementById('js-wrapper-navigation');
+		if (exists(document.getElementById('js-wrapper-navigation'))) {
+			var checkScrollY = function checkScrollY() {
+				var windowScroll = window.scrollY;
+				windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+			};
 
-		function checkScrollY() {
-			var windowScroll = window.scrollY;
-			windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+			var jsNavWrapper = document.getElementById('js-wrapper-navigation');
+
+			checkScrollY();
+
+			window.addEventListener("scroll", checkScrollY);
 		}
-
-		checkScrollY();
-
-		window.addEventListener("scroll", checkScrollY);
 
 		// Modal Window initialization
 		var themeModal = 'modal';

@@ -2,6 +2,13 @@
 	@include e('title'){
 		margin-bottom: 30px;
 		@include transition();
+
+		@include m('small'){
+			@include min(lg){
+				font-size: 55px;
+			}
+		}
+
 		@include ee('flag'){
 			display: inline-block;
 			position: relative;

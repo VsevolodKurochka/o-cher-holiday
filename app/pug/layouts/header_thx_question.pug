@@ -2,6 +2,52 @@ include ../bem/index
 include ../helpers/config
 include ../helpers/mixins
 +b.HEADER.site-header._question
-	.container#site-header-container
-		+e.H1.title.title-lg.wow.fadeInUp#site-header-title Спасибо за Вашу заявку!
-		+e.P.description.wow.fadeInUp(data-wow-delay="0.25s") Мы свяжемся с Вами в ближайшее время.
+	.container
+		+e.H1.title._small.title-lg.wow.fadeInUp Спасибо за Вашу заявку!
+		+e.P.description._small.wow.fadeInUp(data-wow-delay="0.25s") Мы свяжемся с Вами в ближайшее время.
+		+b.quiz
+			+e.header
+				+e.H2.title Ответьте всего на 3 вопроса
+				+e.H3.subtitle Чтобы консультация была максимально полезной
+			+e.content
+				+e.item
+					+e.P.item-title 1. Ваш ребенок уже поступил в учебное заведение Польши?
+					+b.control-group._inline
+						+b.control._default
+							+e.LABEL
+								+e.P.text Да
+								input(type="radio" name="question_1" value="Да")
+								+e.indicator
+						+b.control._default
+							+e.LABEL
+								+e.P.text Нет
+								input(type="radio" name="question_1" value="Нет")
+								+e.indicator
+				+e.item
+					+e.P.item-title 2. Вы планируете обучение ребенка польскому языку в Лагере?
+					+b.control-group._inline
+						+b.control._default
+							+e.LABEL
+								+e.P.text Да
+								input(type="radio" name="question_2" value="Да")
+								+e.indicator
+						+b.control._default
+							+e.LABEL
+								+e.P.text Нет
+								input(type="radio" name="question_2" value="Нет")
+								+e.indicator
+				+e.item
+					+e.P.item-title 3. Вы уже являетесь клиентом Osvita-Market?
+					+b.control-group._inline
+						+b.control._default
+							+e.LABEL
+								+e.P.text Да
+								input(type="radio" name="question_3" value="Да")
+								+e.indicator
+						+b.control._default
+							+e.LABEL
+								+e.P.text Нет
+								input(type="radio" name="question_3" value="Нет")
+								+e.indicator
+			+e.footer
+				+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top#quiz-send Отправить ответы

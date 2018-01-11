@@ -34,24 +34,26 @@
 			wow.init();
 
 		// Scroll
-		const headerContainer = document.getElementById('site-header-container');
-		const headerContainerHeight = headerContainer.offsetHeight;
-		
-		const range = 200;
+		if( exists( document.getElementById('site-header-container') ) ) {
+			const headerContainer = document.getElementById('site-header-container');
+			const headerContainerHeight = headerContainer.offsetHeight;
+			
+			const range = 200;
 
-		window.addEventListener('scroll', function(){
-			let scroll = this.scrollY;
-			if(scroll < headerContainerHeight + 100){
-				headerContainer.style.transform = `translate(0, ${scroll / 10}%)`;
-				headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
+			window.addEventListener('scroll', function(){
+				let scroll = this.scrollY;
+				if(scroll < headerContainerHeight + 100){
+					headerContainer.style.transform = `translate(0, ${scroll / 10}%)`;
+					headerContainer.style.opacity = 1 - (scroll - headerContainerHeight + range) / range;
 
-				if(headerContainer.style.opacity > '1'){
-					headerContainer.style.opacity = '1';
-				}else if(headerContainer.style.opacity < '0'){
-					headerContainer.style.opacity = '0';
+					if(headerContainer.style.opacity > '1'){
+						headerContainer.style.opacity = '1';
+					}else if(headerContainer.style.opacity < '0'){
+						headerContainer.style.opacity = '0';
+					}
 				}
-			}
-		});
+			});
+		}
 
 		const classes = {
 			active: 'active',
@@ -122,16 +124,18 @@
 				}
 
 			// Window scrolling JS
-				const jsNavWrapper = document.getElementById('js-wrapper-navigation');
+				if(exists(document.getElementById('js-wrapper-navigation'))){
+					const jsNavWrapper = document.getElementById('js-wrapper-navigation');
 
-				function checkScrollY(){
-					let windowScroll = window.scrollY;
-					windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+					function checkScrollY(){
+						let windowScroll = window.scrollY;
+						windowScroll > 0 ? addClass(jsNavWrapper, 'nav_scrolled') : removeClass(jsNavWrapper, 'nav_scrolled');
+					}
+
+					checkScrollY();
+
+					window.addEventListener("scroll", checkScrollY);
 				}
-
-				checkScrollY();
-
-				window.addEventListener("scroll", checkScrollY);
 
 
 		// Modal Window initialization
