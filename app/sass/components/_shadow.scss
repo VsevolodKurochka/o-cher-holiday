@@ -55,6 +55,12 @@
 		font-size: 21px;
 	}
 
+	&__title + &{
+		@include e('subtitle'){
+			margin-top: 15px;
+		}
+	}
+
 	@include e('content'){
 		@include padding-x(10px);
 	}
