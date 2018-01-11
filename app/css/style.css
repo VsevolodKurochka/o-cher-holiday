@@ -1274,6 +1274,7 @@ a, button {
   position: relative;
   z-index: 1;
   padding: 30px 15px;
+  overflow: hidden;
   font-size: 16px;
   color: #000;
   background-color: #fff;
@@ -1283,26 +1284,69 @@ a, button {
 
 .quiz__header {
   padding-bottom: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+}
+
+@media (min-width: 768px) {
+  .quiz__header {
+    margin-bottom: 30px;
+  }
 }
 
 .quiz__title {
   font-family: 'FormularBold';
-  font-size: 22px;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .quiz__title {
+    font-size: 22px;
+  }
 }
 
 .quiz__subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .quiz__subtitle {
+    font-size: 18px;
+  }
+}
+
+.quiz__content {
+  position: relative;
+  min-height: 150px;
+}
+
+.quiz__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 140px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.quiz__item_active {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
 }
 
 .quiz__item-title {
   font-family: 'FormularBold';
-}
-
-.quiz__content {
-  margin-bottom: 15px;
 }
 
 .effect:before {
@@ -1681,10 +1725,6 @@ a, button {
 .control {
   position: relative;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .control-group {
@@ -1707,6 +1747,7 @@ a, button {
   padding-left: 30px;
   font-size: 15px;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .control__indicator {
@@ -2337,6 +2378,12 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+@media (max-width: 767px) {
+  .site-header__description_small {
+    margin-bottom: 15px;
+  }
+}
+
 .site-header__info {
   margin-top: 45px;
   text-align: center;
@@ -2444,6 +2491,16 @@ input[type="checkbox"]:checked + .control__indicator:before {
   -webkit-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+}
+
+.site-header__title_small {
+  margin-top: 0;
+}
+
+@media (max-width: 767px) {
+  .site-header__title_small {
+    margin-bottom: 15px;
+  }
 }
 
 @media (min-width: 1200px) {

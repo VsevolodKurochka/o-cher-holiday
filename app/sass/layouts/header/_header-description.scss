@@ -9,5 +9,11 @@
 			max-width: 700px;
 			@include margin-x(auto);
 		}
+
+		@include m('small'){
+			@include max(sm){
+				margin-bottom: 15px;
+			}
+		}
 	}
 }

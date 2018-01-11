@@ -6,30 +6,57 @@
 	color: $color-general;
 	font-size: 16px;
 	z-index: 1;
+	overflow: hidden;
 	
 	@include e('header'){
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		padding-bottom: 15px;
 		border-bottom: 1px solid #ddd;
+		@include min(sm){
+			margin-bottom: 30px;
+		}
 	}
 
 	@include e('title'){
-		font-size: 22px;
+		font-size: 16px;
 		font-family: 'FormularBold';
+		@include min(sm){
+			font-size: 22px;
+		}
 	}
 
 	@include e('subtitle'){
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: normal;
+		@include min(sm){
+			font-size: 18px;
+		}
+	}
+	
+	@include e('content'){
+		position: relative;
+		min-height: 150px;
 	}
 
 	@include e('item'){
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		min-height: 140px;
+		opacity: 0;
+		visibility: hidden;
+		@include transition();
+		transform: translateY(100%);
+		@include m('active'){
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}	
+	
 		@include ee('title'){
 			font-family: 'FormularBold';
 		}
 	}
-
-	@include e('content'){
-		margin-bottom: 15px;
-	}
+	
 }

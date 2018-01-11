@@ -6,7 +6,6 @@
 }
 .control{
 	position: relative;
-	user-select: none;
 	cursor: pointer;
 	&-group{
 		position: relative;
@@ -27,6 +26,7 @@
 		vertical-align: middle;
 		padding-left: 30px;
 		font-size: 15px;
+		cursor: pointer;
 	}
 	&__indicator{
 		position: absolute;
