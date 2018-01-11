@@ -22,4 +22,18 @@
 			background-attachment: fixed;
 		}
 	}
+
+	@include m('thx'){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	@include m('question'){
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
 }

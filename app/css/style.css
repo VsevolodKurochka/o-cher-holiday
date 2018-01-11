@@ -2458,6 +2458,46 @@ input[type="checkbox"]:checked + .control__indicator:before {
   }
 }
 
+.site-header_thx {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+
+  -webkit-box-pack: center;
+
+  -webkit-justify-content: center;
+
+  -ms-flex-pack: center;
+
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.site-header_question {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+
+  -webkit-box-pack: center;
+
+  -webkit-justify-content: center;
+
+  -ms-flex-pack: center;
+
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .site-footer {
   padding-top: 15px;
   padding-bottom: 15px;
