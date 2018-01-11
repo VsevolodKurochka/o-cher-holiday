@@ -9,12 +9,28 @@ $(document).ready(function(){
 		// Set data-index for each quiz__item
 		$('.quiz__item').each(function(index){
 			$(this).attr('data-index', index);
+
+			// Get data-title
+			var dataTitle = $(this).attr('data-title');
+
+			// Get title of quiz item
+			var quizItemTitle = $(this).find('.quiz__item-title');
+
+			// set him html of this data-title
+			quizItemTitle.html(dataTitle);
+
+			// Get radio buttons of quiz item
+			var quizItemRadio = $(this).find('input[type="radio"]');
+
+			// Set attribute for radio buttons
+			quizItemRadio.attr('data-title', dataTitle);
+
 		});
 
-		// Radio button change
-
+		// Define array for quiz answers
 		var quizArray = [];
 
+		// Radio button change
 		$('.js-quiz').change(function(){
 
 			// Get value of changed radio
@@ -38,14 +54,16 @@ $(document).ready(function(){
 			// Add 1 for find next $('.quiz__item')
 			var quizNextIndex = quizParentIndex + 1;
 
+			// Push to array answer
 			quizArray.push(concat);
 
+			// Switch items 
 			if(quizParentIndex < quizItemsLength){
 
 				// Remove class of parent
 				quizParent.removeClass('quiz__item_active');
 
-				// Show find element
+				// Show next element, starting from parent
 				$('.quiz__item[data-index="'+ quizNextIndex +'"]').addClass('quiz__item_active');
 			}
 

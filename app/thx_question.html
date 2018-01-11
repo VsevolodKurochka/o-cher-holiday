@@ -43,70 +43,72 @@
                                                                                                   </h3>
                                                                         </div>
                                                                         <div class="quiz__content">
-                                                                                                  <div class="quiz__item quiz__item_active">
-                                                                                                                            <p class="quiz__item-title">1. Ваш ребенок уже поступил в учебное заведение Польши?
-                                                                                                                            </p>
-                                                                                                                      <div class="control-group control-group_inline">
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Да
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_1" value="Да" data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Нет
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_1" value="Нет" data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                      </div>
-                                                                                                  </div>
-                                                                                                  <div class="quiz__item">
-                                                                                                                            <p class="quiz__item-title">2. Вы планируете обучение ребенка польскому языку в Лагере?
-                                                                                                                            </p>
-                                                                                                                      <div class="control-group control-group_inline">
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Да
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_2" value="Да" data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Нет
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_2" value="Нет" data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                      </div>
-                                                                                                  </div>
-                                                                                                  <div class="quiz__item">
-                                                                                                                            <p class="quiz__item-title">3. Вы уже являетесь клиентом Osvita-Market?
-                                                                                                                            </p>
-                                                                                                                      <div class="control-group control-group_inline">
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Да
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_3" value="Да" data-title="3. Вы уже являетесь клиентом Osvita-Market?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                                          <div class="control control_default">
-                                                                                                                                                                    <label>
-                                                                                                                                                                                              <p class="control__text">Нет
-                                                                                                                                                                                              </p>
-                                                                                                                                                                      <input class="js-quiz" type="radio" name="question_3" value="Нет" data-title="3. Вы уже являетесь клиентом Osvita-Market?"><span class="control__indicator"></span>
-                                                                                                                                                                    </label>
-                                                                                                                                          </div>
-                                                                                                                      </div>
-                                                                                                                            <div class="quiz__footer">
-                                                                                                                                                <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" id="quiz-send">Отправить ответы
-                                                                                                                                                </button>
-                                                                                                                            </div>
-                                                                                                  </div>
+                                                                          <form action="quiz.php" method="POST" id="quizForm">
+                                                                                                    <div class="quiz__item quiz__item_active" data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?">
+                                                                                                                              <p class="quiz__item-title">
+                                                                                                                              </p>
+                                                                                                                        <div class="control-group control-group_inline">
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Да
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_1" value="Да"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Нет
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_1" value="Нет"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="quiz__item" data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?">
+                                                                                                                              <p class="quiz__item-title">
+                                                                                                                              </p>
+                                                                                                                        <div class="control-group control-group_inline">
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Да
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_2" value="Да"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Нет
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_2" value="Нет"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="quiz__item" data-title="3. Вы уже являетесь клиентом Osvita-Market?">
+                                                                                                                              <p class="quiz__item-title"> 
+                                                                                                                              </p>
+                                                                                                                        <div class="control-group control-group_inline">
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Да
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_3" value="Да"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="control control_default">
+                                                                                                                                                                      <label>
+                                                                                                                                                                                                <p class="control__text">Нет
+                                                                                                                                                                                                </p>
+                                                                                                                                                                        <input class="js-quiz" type="radio" name="question_3" value="Нет"><span class="control__indicator"></span>
+                                                                                                                                                                      </label>
+                                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                              <div class="quiz__footer">
+                                                                                                                                                  <button class="btn btn_size-lg btn_brand-1 effect effect_bounce-top" type="submit">Отправить ответы
+                                                                                                                                                  </button>
+                                                                                                                              </div>
+                                                                                                    </div>
+                                                                          </form>
                                                                         </div>
                                               </div>
                           </div>

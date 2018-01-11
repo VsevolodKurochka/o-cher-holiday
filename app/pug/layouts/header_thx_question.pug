@@ -10,44 +10,45 @@ include ../helpers/mixins
 				+e.H2.title Ответьте всего на 3 вопроса
 				+e.H3.subtitle Чтобы консультация была максимально полезной
 			+e.content
-				+e.item._active
-					+e.P.item-title 1. Ваш ребенок уже поступил в учебное заведение Польши?
-					+b.control-group._inline
-						+b.control._default
-							+e.LABEL
-								+e.P.text Да
-								input(type="radio" name="question_1" value="Да" data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?" class="js-quiz")
-								+e.indicator
-						+b.control._default
-							+e.LABEL
-								+e.P.text Нет
-								input(type="radio" name="question_1" value="Нет" data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?" class="js-quiz")
-								+e.indicator
-				+e.item
-					+e.P.item-title 2. Вы планируете обучение ребенка польскому языку в Лагере?
-					+b.control-group._inline
-						+b.control._default
-							+e.LABEL
-								+e.P.text Да
-								input(type="radio" name="question_2" value="Да" data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?" class="js-quiz")
-								+e.indicator
-						+b.control._default
-							+e.LABEL
-								+e.P.text Нет
-								input(type="radio" name="question_2" value="Нет" data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?" class="js-quiz")
-								+e.indicator
-				+e.item
-					+e.P.item-title 3. Вы уже являетесь клиентом Osvita-Market?
-					+b.control-group._inline
-						+b.control._default
-							+e.LABEL
-								+e.P.text Да
-								input(type="radio" name="question_3" value="Да" data-title="3. Вы уже являетесь клиентом Osvita-Market?" class="js-quiz")
-								+e.indicator
-						+b.control._default
-							+e.LABEL
-								+e.P.text Нет
-								input(type="radio" name="question_3" value="Нет" data-title="3. Вы уже являетесь клиентом Osvita-Market?" class="js-quiz")
-								+e.indicator
-					+e.footer
-						+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top#quiz-send Отправить ответы
+				form(action="quiz.php" method="POST" id="quizForm")
+					+e.item._active(data-title="1. Ваш ребенок уже поступил в учебное заведение Польши?")
+						+e.P.item-title
+						+b.control-group._inline
+							+b.control._default
+								+e.LABEL
+									+e.P.text Да
+									input(type="radio" name="question_1" value="Да" class="js-quiz")
+									+e.indicator
+							+b.control._default
+								+e.LABEL
+									+e.P.text Нет
+									input(type="radio" name="question_1" value="Нет" class="js-quiz")
+									+e.indicator
+					+e.item(data-title="2. Вы планируете обучение ребенка польскому языку в Лагере?")
+						+e.P.item-title
+						+b.control-group._inline
+							+b.control._default
+								+e.LABEL
+									+e.P.text Да
+									input(type="radio" name="question_2" value="Да" class="js-quiz")
+									+e.indicator
+							+b.control._default
+								+e.LABEL
+									+e.P.text Нет
+									input(type="radio" name="question_2" value="Нет" class="js-quiz")
+									+e.indicator
+					+e.item(data-title="3. Вы уже являетесь клиентом Osvita-Market?")
+						+e.P.item-title 
+						+b.control-group._inline
+							+b.control._default
+								+e.LABEL
+									+e.P.text Да
+									input(type="radio" name="question_3" value="Да" class="js-quiz")
+									+e.indicator
+							+b.control._default
+								+e.LABEL
+									+e.P.text Нет
+									input(type="radio" name="question_3" value="Нет" class="js-quiz")
+									+e.indicator
+						+e.footer
+							+b.BUTTON.btn._size-lg._brand-1.effect._bounce-top(type="submit") Отправить ответы
